@@ -1,0 +1,1669 @@
+{
+    "CreateService": {
+        "method": "POST",
+        "path": "/services",
+        "description": "Creates a service",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/175256.htm",
+            "zh": "https://help.aliyun.com/document_detail/175256.htm"
+        },
+        "parameter": {
+            "body": {
+                "description": {
+                    "required": false,
+                    "description": "The description of the service.",
+                    "type": "String"
+                },
+                "internetAccess": {
+                    "required": false,
+                    "description": "Specifies whether to allow functions to access the Internet. Valid values:\ntrue: allows functions to access the Internet.\nfalse: does not allow functions to access the Internet.",
+                    "type": "Boolean"
+                },
+                "logConfig": {
+                    "required": false,
+                    "description": "The log configuration, which specifies a Logstore to store function execution logs.",
+                    "type": "LogConfig"
+                },
+                "nasConfig": {
+                    "required": false,
+                    "description": "The configuration of the Apsara File Storage NAS file system, which allows functionsin the specified service in Function Compute to access the NAS file system.",
+                    "type": "NASConfig"
+                },
+                "role": {
+                    "required": false,
+                    "description": "The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to grant requiredpermissions to Function Compute. The RAM role is used in the following scenarios:\nSends function execution logs to your Logstore.Generates a token for a function to access other cloud resources during function execution.",
+                    "type": "String"
+                },
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "vpcConfig": {
+                    "required": false,
+                    "description": "The virtual private cloud (VPC) configuration, which allows functions in the specifiedservice in Function Compute to access the specified VPC.",
+                    "type": "VPCConfig"
+                },
+                "tracingConfig": {
+                    "required": false,
+                    "description": "The configuration of Tracing Analysis. After you configure Tracing Analysis for aservice in Function Compute, you can record the execution duration of a request, viewthe amount of the cold start time for a function, and record the execution durationof a function. For more information, see Overview.",
+                    "type": "TracingConfig"
+                }
+            }
+        }
+    },
+    "DeleteService": {
+        "method": "DELETE",
+        "path": "/services/{serviceName}",
+        "description": "You can call this operation to delete a service",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/189227.htm",
+            "zh": "https://help.aliyun.com/document_detail/189227.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service to be deleted.",
+                    "type": "String"
+                }
+            },
+            "header": {
+                "If-Match": {
+                    "required": false,
+                    "description": "The value used to ensure that the modified service is consistent with the serviceto be modified. The value is obtained from the responses of the CreateService, UpdateService, and GetService operations.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "UpdateService": {
+        "method": "PUT",
+        "path": "/services/{serviceName}",
+        "description": "Updates the information about a service",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/188167.htm",
+            "zh": "https://help.aliyun.com/document_detail/188167.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                }
+            },
+            "body": {
+                "description": {
+                    "required": false,
+                    "description": "The description of the service.",
+                    "type": "String"
+                },
+                "internetAccess": {
+                    "required": false,
+                    "description": "Specifies whether to allow functions to access the Internet. Valid values:\ntrue: allows functions to access the Internet.\nfalse: does not allow functions to access the Internet.",
+                    "type": "Boolean"
+                },
+                "logConfig": {
+                    "required": false,
+                    "description": "The log configuration, which specifies a Logstore to store function execution logs.",
+                    "type": "LogConfig"
+                },
+                "nasConfig": {
+                    "required": false,
+                    "description": "The configuration of the Apsara File Storage NAS file system, which allows functionsin the specified service in Function Compute to access the NAS file system.",
+                    "type": "NASConfig"
+                },
+                "role": {
+                    "required": false,
+                    "description": "The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to grant requiredpermissions to Function Compute. The RAM role is used in the following scenarios:\nSends function execution logs to your Logstore.Generates a token for a function to access other cloud resources during function execution.",
+                    "type": "String"
+                },
+                "vpcConfig": {
+                    "required": false,
+                    "description": "The virtual private cloud (VPC) configuration, which allows functions in the specifiedservice in Function Compute to access the specified VPC.",
+                    "type": "VPCConfig"
+                },
+                "tracingConfig": {
+                    "required": false,
+                    "description": "The configuration of Tracing Analysis. After you configure Tracing Analysis for aservice in Function Compute, you can record the execution duration of a request, viewthe amount of the cold start time for a function, and record the execution durationof a function. For more information, see Overview.",
+                    "type": "TracingConfig"
+                }
+            },
+            "header": {
+                "If-Match": {
+                    "required": false,
+                    "description": "The name of the service.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "GetService": {
+        "method": "GET",
+        "path": "/services/{serviceName}{qualifier}",
+        "description": "Queries the information about a service",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/189225.htm",
+            "zh": "https://help.aliyun.com/document_detail/189225.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "qualifier": {
+                    "required": false,
+                    "description": "The version or alias of the service.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "ListServices": {
+        "method": "GET",
+        "path": "/services",
+        "description": "Queries services",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/175559.htm",
+            "zh": "https://help.aliyun.com/document_detail/175559.htm"
+        },
+        "parameter": {
+            "query": {
+                "limit": {
+                    "required": false,
+                    "description": "The maximum number of services to be returned. Default value: 20. Maximum value: 100.The number of returned services is less than or equal to the specified number.",
+                    "type": "Integer"
+                },
+                "nextToken": {
+                    "required": false,
+                    "description": "The token used to obtain more results. If the number of services exceeds the limit,the nextToken parameter is returned. You can include the parameter in subsequent invocationsto obtain more results. You do not need to provide this parameter in the first invocation.",
+                    "type": "String"
+                },
+                "prefix": {
+                    "required": false,
+                    "description": "The prefix that the names of returned services must contain. For example, if you setthe parameter to a, the names of all the returned services start with a.",
+                    "type": "String"
+                },
+                "startKey": {
+                    "required": false,
+                    "description": "The position from which the list begins. Results are sorted in alphabetical orderand those results following startKey (inclusive) are listed.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "CreateFunction": {
+        "method": "POST",
+        "path": "/services/{serviceName}/functions",
+        "description": "Creates a function",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/189984.htm",
+            "zh": "https://help.aliyun.com/document_detail/189984.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                }
+            },
+            "body": {
+                "code": {
+                    "required": false,
+                    "description": "The code of the function. The code must be packaged into a ZIP file.",
+                    "type": "Code"
+                },
+                "customContainerConfig": {
+                    "required": false,
+                    "description": "The configuration of the custom container runtime. After you configure the customcontainer runtime, you can use custom container images to execute functions.",
+                    "type": "CustomContainerConfig"
+                },
+                "layers": {
+                    "required": false,
+                    "description": "The name of the layer resource.",
+                    "type": "Array of String"
+                },
+                "description": {
+                    "required": false,
+                    "description": "The description of the function.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function.",
+                    "type": "String"
+                },
+                "handler": {
+                    "required": true,
+                    "description": "The handler of the function. The format is determined by the programming language.For more information, see Function handlers.",
+                    "type": "String"
+                },
+                "initializationTimeout": {
+                    "required": false,
+                    "description": "The timeout period for the execution of the initializer function. Unit: seconds. Defaultvalue: 3. Valid values: 1 to 300. When this period expires, the execution of the initializerfunction is terminated.",
+                    "type": "Integer"
+                },
+                "initializer": {
+                    "required": false,
+                    "description": "The handler of the initializer function. The format is determined by the programminglanguage. For more information, see Initializer function.",
+                    "type": "String"
+                },
+                "memorySize": {
+                    "required": false,
+                    "description": "The memory size of the function. Unit: MB. The memory size must be a multiple of 64MB. Instance types have different memory specifications. For more information, seeInstance types.",
+                    "type": "Integer"
+                },
+                "runtime": {
+                    "required": false,
+                    "description": "The runtime environment of the function. Valid values: nodejs6, nodejs8, nodejs10, nodejs12, python2.7, python3, java8, java11, php7.2, dotnetcore2.1, custom runtime, and custom container.",
+                    "type": "String"
+                },
+                "timeout": {
+                    "required": false,
+                    "description": "The timeout period for the execution of the function. Unit: seconds. Default value:60. Valid values: 1 to 86400. When this period expires, the execution of the functionis terminated.",
+                    "type": "Integer"
+                },
+                "caPort": {
+                    "required": false,
+                    "description": "The port on which the HTTP server listens for the custom runtime or custom containerruntime.",
+                    "type": "Integer"
+                }
+            },
+            "header": {
+                "X-Fc-Code-Checksum": {
+                    "required": false,
+                    "description": "The CRC-64 value of the function code package.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "DeleteFunction": {
+        "method": "DELETE",
+        "path": "/services/{serviceName}/functions/{functionName}",
+        "description": "You can call this operation to delete a function",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191153.htm",
+            "zh": "https://help.aliyun.com/document_detail/191153.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service for which the function is to be deleted.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function to be deleted.",
+                    "type": "String"
+                }
+            },
+            "header": {
+                "If-Match": {
+                    "required": false,
+                    "description": "The value used to ensure that the modified resource is consistent with the resourceto be modified. The value is obtained from the responses of CreateFunction, GetFunction, and UpdateFunction.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "UpdateFunction": {
+        "method": "PUT",
+        "path": "/services/{serviceName}/functions/{functionName}",
+        "description": "Updates a function",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/189986.htm",
+            "zh": "https://help.aliyun.com/document_detail/189986.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function.",
+                    "type": "String"
+                }
+            },
+            "body": {
+                "code": {
+                    "required": false,
+                    "description": "The code of the function. The code must be packaged into a ZIP file.",
+                    "type": "Code"
+                },
+                "customContainerConfig": {
+                    "required": false,
+                    "description": "The configuration of the custom container. After you configure the custom containerruntime, you can use custom container images to execute functions.",
+                    "type": "CustomContainerConfig"
+                },
+                "layers": {
+                    "required": false,
+                    "description": "The name of the layer resource.",
+                    "type": "Array of String"
+                },
+                "description": {
+                    "required": false,
+                    "description": "The description of the function.",
+                    "type": "String"
+                },
+                "environmentVariables": {
+                    "required": false,
+                    "description": "The environment variables configured for the function. The values of the environmentvariables are obtained from the function. For more information, see Overview.",
+                    "type": "Map"
+                },
+                "handler": {
+                    "required": false,
+                    "description": "The handler of the function. The format is determined by the programming language.For more information, see Function handlers.",
+                    "type": "String"
+                },
+                "memorySize": {
+                    "required": false,
+                    "description": "The memory size of the function. Unit: MB. The memory size is a multiple of 64 MB.Instance types have different memory specifications. For more information, see Instance types.",
+                    "type": "Integer"
+                },
+                "runtime": {
+                    "required": false,
+                    "description": "The runtime environment of the function. Valid values: nodejs6, nodejs8, nodejs10, nodejs12, python2.7, python3, java8, java11, php7.2, dotnetcore2.1, custom runtime, and custom container.",
+                    "type": "String"
+                },
+                "timeout": {
+                    "required": false,
+                    "description": "The timeout period for the execution of the function. Unit: seconds. Default value:60. Valid values: 1 to 86400. When this period expires, the execution of the functionis terminated.",
+                    "type": "String"
+                },
+                "initializationTimeout": {
+                    "required": false,
+                    "description": "The timeout period for the execution of the initializer function. Unit: seconds. Defaultvalue: 3. Valid values: 1 to 300. When this period expires, the execution of the initializerfunction is terminated.",
+                    "type": "Integer"
+                },
+                "initializer": {
+                    "required": false,
+                    "description": "The handler of the initializer function. The format is determined by the programminglanguage. For more information, see Initializer function.",
+                    "type": "String"
+                },
+                "caPort": {
+                    "required": false,
+                    "description": "The port on which the HTTP server listens for the custom runtime or custom containerruntime.",
+                    "type": "Integer"
+                }
+            },
+            "header": {
+                "If-Match": {
+                    "required": false,
+                    "description": "The value used to ensure that the modified resource is consistent with the resourceto be modified. You can obtain the value from the responses of the CreateFunction, GetFunction, and UpdateFunction operations. For more information, see CreateFunction, GetFunction, and UpdateFunction.",
+                    "type": "String"
+                },
+                "X-Fc-Code-Checksum": {
+                    "required": false,
+                    "description": "The CRC-64 value of the function code package.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "GetFunction": {
+        "method": "GET",
+        "path": "/services/{serviceName}{qualifier}/functions/{functionName}",
+        "description": "Views the information about a function",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/189985.htm",
+            "zh": "https://help.aliyun.com/document_detail/189985.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "qualifier": {
+                    "required": false,
+                    "description": "The version or alias of the service.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "GetFunctionCode": {
+        "method": "GET",
+        "path": "/services/{serviceName}{qualifier}/functions/{functionName}/code",
+        "description": "You can call this operation to view the function code package",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191154.htm",
+            "zh": "https://help.aliyun.com/document_detail/191154.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function.",
+                    "type": "String"
+                },
+                "qualifier": {
+                    "required": false,
+                    "description": "The version or alias of the service.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "ListFunctions": {
+        "method": "GET",
+        "path": "/services/{serviceName}{qualifier}/functions",
+        "description": "Views the list of functions",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191155.htm",
+            "zh": "https://help.aliyun.com/document_detail/191155.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": false,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "qualifier": {
+                    "required": false,
+                    "description": "The version or alias of the service.",
+                    "type": "String"
+                }
+            },
+            "query": {
+                "limit": {
+                    "required": false,
+                    "description": "The maximum number of resources to be returned. Default value: 20. The value cannotexceed 100. The number of returned resources is smaller than or equal to the specifiednumber.",
+                    "type": "Integer"
+                },
+                "nextToken": {
+                    "required": false,
+                    "description": "The token used to obtain more results. If the number of resources exceeds the limit,the nextToken parameter is returned. Include this parameter in subsequent invocationsto obtain more results. You do not need to provide this parameter in the first invocation.",
+                    "type": "String"
+                },
+                "prefix": {
+                    "required": false,
+                    "description": "The prefix that the names of returned resources must contain.",
+                    "type": "String"
+                },
+                "startKey": {
+                    "required": false,
+                    "description": "The starting position of the result list. Results are sorted in the alphabetical orderand those results following startKey (inclusive) are listed.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "InvokeFunction": {
+        "method": "POST",
+        "path": "/services/{serviceName}{qualifier}/functions/{functionName}",
+        "description": "Invokes a function",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191156.htm",
+            "zh": "https://help.aliyun.com/document_detail/191156.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "qualifier": {
+                    "required": false,
+                    "description": "The version or alias of the service.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function.",
+                    "type": "String"
+                }
+            },
+            "body": {
+                "required": false,
+                "description": "Invoke body.",
+                "type": "String"
+            },
+            "header": {
+                "X-Fc-Invocation-Type": {
+                    "required": false,
+                    "description": "The method used to invoke the function. Valid values:\nSync: synchronous\nAsync: asynchronous",
+                    "type": "String"
+                },
+                "X-Fc-Log-Type": {
+                    "required": false,
+                    "description": "The method used to return logs. Valid values:\nTail: returns the last 4 KB of logs that are generated for the current request.\nNone: No logs are returned for the current request.Default value: None.",
+                    "type": "String"
+                },
+                "X-Fc-Stateful-Async-Invocation-Id": {
+                    "required": false,
+                    "description": "The ID of the stateful asynchronous invocation.\nNote When you use an SDK to invoke a function, we recommend that you specify a business-relatedID to facilitate subsequent operations. For example, a function that processes a videocan use the file name of the video as the invocation ID. Then, you can use this IDto check whether the video is processed or terminate the processing of the video.The ID must start with a letter or an underscore (_) and can contain letters, digits,underscores (_), and hyphens (-). The ID can be up to 128 characters in length. Ifyou do not specify the ID of the asynchronous invocation, Function Compute automaticallygenerates an ID.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "CreateTrigger": {
+        "method": "POST",
+        "path": "/services/{serviceName}/functions/{functionName}/triggers",
+        "description": "You can call this operation to create a trigger",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/190054.htm",
+            "zh": "https://help.aliyun.com/document_detail/190054.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function.",
+                    "type": "String"
+                }
+            },
+            "body": {
+                "invocationRole": {
+                    "required": true,
+                    "description": "The role required when the trigger source such as OSS invokes the function. For more information, see Overview.",
+                    "type": "String"
+                },
+                "qualifier": {
+                    "required": true,
+                    "description": "The version or alias of the service.",
+                    "type": "String"
+                },
+                "sourceArn": {
+                    "required": true,
+                    "description": "The Alibaba Cloud Resource Name (ARN) of the event source for the trigger.",
+                    "type": "String"
+                },
+                "triggerConfig": {
+                    "required": true,
+                    "description": "The configurations of the trigger. The configurations vary with trigger types.",
+                    "type": "String"
+                },
+                "triggerName": {
+                    "required": true,
+                    "description": "The name of the trigger.",
+                    "type": "String"
+                },
+                "triggerType": {
+                    "required": true,
+                    "description": "The type of the trigger. Valid values:\noss: the OSS trigger. For more information, see Overview of OSS event triggers.\nlog: the Log Service trigger. For more information, see Overview of SLS triggers.\ntimer: the timer trigger. For more information, see Timer trigger.\nhttp: the HTTP trigger. For more information, see Overview.\ntablestore: the Tablestore trigger. For more information, see Overview.\ncdn_events: the CDN event trigger. For more information, see Overview.\nmns_topic: the MNS topic trigger. For more information, see Overview.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "DeleteTrigger": {
+        "method": "DELETE",
+        "path": "/services/{serviceName}/functions/{functionName}/triggers/{triggerName}",
+        "description": "You can call this operation to delete a trigger",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191157.htm",
+            "zh": "https://help.aliyun.com/document_detail/191157.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function.",
+                    "type": "String"
+                },
+                "triggerName": {
+                    "required": true,
+                    "description": "The name of the trigger to be deleted.",
+                    "type": "String"
+                }
+            },
+            "header": {
+                "If-Match": {
+                    "required": false,
+                    "description": "The value used to ensure that the modified resource is consistent with the resourceto be modified. The value is obtained from the responses of CreateTrigger, GetTrigger, and UpdateTrigger.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "UpdateTrigger": {
+        "method": "PUT",
+        "path": "/services/{serviceName}/functions/{functionName}/triggers/{triggerName}",
+        "description": "You can call this operation to update a trigger",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/190055.htm",
+            "zh": "https://help.aliyun.com/document_detail/190055.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function.",
+                    "type": "String"
+                },
+                "triggerName": {
+                    "required": true,
+                    "description": "The name of the trigger.",
+                    "type": "String"
+                }
+            },
+            "body": {
+                "invocationRole": {
+                    "required": true,
+                    "description": "The role required when the trigger source such as OSS invokes the function. For more information, see Overview.",
+                    "type": "String"
+                },
+                "qualifier": {
+                    "required": true,
+                    "description": "The version of the service. For more information, see Introduction to versions.",
+                    "type": "String"
+                },
+                "triggerConfig": {
+                    "required": true,
+                    "description": "The configurations of the trigger. The configurations vary with trigger types.",
+                    "type": "String"
+                }
+            },
+            "header": {
+                "If-Match": {
+                    "required": false,
+                    "description": "The value used to ensure that the modified resource is consistent with the resourceto be modified. The value is obtained from the responses of CreateTrigger, GetTrigger, and UpdateTrigger.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "GetTrigger": {
+        "method": "GET",
+        "path": "/services/{serviceName}/functions/{functionName}/triggers/{triggerName}",
+        "description": "You can call this operation to view information about a trigger",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/190056.htm",
+            "zh": "https://help.aliyun.com/document_detail/190056.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function.",
+                    "type": "String"
+                },
+                "triggerName": {
+                    "required": true,
+                    "description": "The name of the trigger.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "ListTriggers": {
+        "method": "GET",
+        "path": "/services/{serviceName}/functions/{functionName}/triggers",
+        "description": "You can call this operation to view the list of triggers",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191158.htm",
+            "zh": "https://help.aliyun.com/document_detail/191158.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function.",
+                    "type": "String"
+                }
+            },
+            "query": {
+                "limit": {
+                    "required": false,
+                    "description": "The maximum number of resources to return. Default value: 20. Maximum value: 100.The number of returned resources is smaller than or equal to the specified number.",
+                    "type": "Integer"
+                },
+                "nextToken": {
+                    "required": false,
+                    "description": "The token used to obtain more results. If the number of resources exceeds the limit,the nextToken parameter is returned. Include this parameter in subsequent invocationsto obtain more results. You do not need to provide this parameter in the first invocation.",
+                    "type": "Integer"
+                },
+                "prefix": {
+                    "required": false,
+                    "description": "The prefix that the names of returned resources must contain.",
+                    "type": "String"
+                },
+                "startKey": {
+                    "required": false,
+                    "description": "The starting position of the result list. Results are sorted in the alphabetical orderand those results following startKey (inclusive) are listed.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "PublishServiceVersion": {
+        "method": "POST",
+        "path": "/services/{serviceName}/versions",
+        "description": "You can call this operation to publish a service version",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191160.htm",
+            "zh": "https://help.aliyun.com/document_detail/191160.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                }
+            },
+            "body": {
+                "description": {
+                    "required": false,
+                    "description": "The description of the service version.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "DeleteServiceVersion": {
+        "method": "DELETE",
+        "path": "/services/{serviceName}/versions/{versionId}",
+        "description": "You can call this operation to delete a service version",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191161.htm",
+            "zh": "https://help.aliyun.com/document_detail/191161.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "versionId": {
+                    "required": true,
+                    "description": "The version of the service.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "ListServiceVersions": {
+        "method": "GET",
+        "path": "/services/{serviceName}/versions",
+        "description": "You can call this operation to view the list of versions",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191162.htm",
+            "zh": "https://help.aliyun.com/document_detail/191162.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                }
+            },
+            "query": {
+                "limit": {
+                    "required": false,
+                    "description": "The maximum number of resources to return. Default value: 20. Maximum value: 100.The number of returned resources is smaller than or equal to the specified number.",
+                    "type": "Integer"
+                },
+                "nextToken": {
+                    "required": false,
+                    "description": "The token used to obtain more results. If the number of resources exceeds the limit,the nextToken parameter is returned. Include this parameter in subsequent invocationsto obtain more results. You do not need to provide this parameter in the first invocation.",
+                    "type": "String"
+                },
+                "startKey": {
+                    "required": false,
+                    "description": "The position from which the list begins. Results are sorted based on the version numbers.",
+                    "type": "String"
+                },
+                "direction": {
+                    "required": false,
+                    "description": "The direction in which the returned versions are sorted. Default value: BACKWARD.Valid values:\nFORWARD: The results are sorted in ascending order.\nBACKWARD: The results are sorted in descending order.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "CreateAlias": {
+        "method": "POST",
+        "path": "/services/{serviceName}/aliases",
+        "description": "You can call this operation to create an alias",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/162952.htm",
+            "zh": "https://help.aliyun.com/document_detail/162952.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                }
+            },
+            "body": {
+                "additionalVersionWeight": {
+                    "required": false,
+                    "description": "The additional version to which the alias points and the weight of the additionalversion.\nThe additional version takes effect only when the function is invoked.\nThe value consists of a version number and the corresponding weight. For example,2:0.05 indicates that when a function is invoked, version 2 is the additional version,5% of the traffic is distributed to the additional version, and 95% of the trafficis distributed to the major version.",
+                    "type": "Map"
+                },
+                "aliasName": {
+                    "required": false,
+                    "description": "The name of the alias.",
+                    "type": "String"
+                },
+                "description": {
+                    "required": false,
+                    "description": "The description of the alias.",
+                    "type": "String"
+                },
+                "versionId": {
+                    "required": false,
+                    "description": "The version to which the alias points.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "DeleteAlias": {
+        "method": "DELETE",
+        "path": "/services/{serviceName}/aliases/{aliasName}",
+        "description": "You can call this operation to delete an alias",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191163.htm",
+            "zh": "https://help.aliyun.com/document_detail/191163.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "aliasName": {
+                    "required": true,
+                    "description": "The name of the alias.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "UpdateAlias": {
+        "method": "PUT",
+        "path": "/services/{serviceName}/aliases/{aliasName}",
+        "description": "You can call this operation to update an alias",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191164.htm",
+            "zh": "https://help.aliyun.com/document_detail/191164.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "aliasName": {
+                    "required": true,
+                    "description": "The name of the alias.",
+                    "type": "String"
+                }
+            },
+            "body": {
+                "additionalVersionWeight": {
+                    "required": false,
+                    "description": "The additional version to which the alias points and the weight of the additionalversion.\nThe additional version takes effect only when the function is invoked.\nThe value consists of a version number and the corresponding weight. For example,2:0.05 indicates that when a function is invoked, version 2 is the additional version,5% of the traffic is distributed to the additional version, and 95% of the trafficis distributed to the major version.",
+                    "type": "Map"
+                },
+                "description": {
+                    "required": false,
+                    "description": "The description of the alias.",
+                    "type": "String"
+                },
+                "versionId": {
+                    "required": false,
+                    "description": "The version to which the alias points.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "GetAlias": {
+        "method": "GET",
+        "path": "/services/{serviceName}/aliases/{aliasName}",
+        "description": "You can call this operation to view information about an alias",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191165.htm",
+            "zh": "https://help.aliyun.com/document_detail/191165.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "aliasName": {
+                    "required": true,
+                    "description": "The name of the alias.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "ListAliases": {
+        "method": "GET",
+        "path": "/services/{serviceName}/aliases",
+        "description": "You can call this operation to view the list of aliases",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191166.htm",
+            "zh": "https://help.aliyun.com/document_detail/191166.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                }
+            },
+            "query": {
+                "limit": {
+                    "required": false,
+                    "description": "The maximum number of resources to return. Default value: 20. Maximum value: 100.The number of returned resources is smaller than or equal to the specified number.",
+                    "type": "Integer"
+                },
+                "nextToken": {
+                    "required": false,
+                    "description": "The token used to obtain more results. If the number of resources exceeds the limit,the nextToken parameter is returned. Include this parameter in subsequent invocationsto obtain more results. You do not need to provide this parameter in the first invocation.",
+                    "type": "String"
+                },
+                "prefix": {
+                    "required": false,
+                    "description": "The prefix that the names of returned resources must contain. For example, if Prefixis a, all returned resource names start with a.",
+                    "type": "String"
+                },
+                "startKey": {
+                    "required": false,
+                    "description": "The starting position of the result list. Results are sorted in the alphabetical orderand those results following startKey (inclusive) are listed.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "CreateCustomDomain": {
+        "method": "POST",
+        "path": "/custom-domains",
+        "description": "You can call this operation to create a custom domain name",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/175234.htm",
+            "zh": "https://help.aliyun.com/document_detail/175234.htm"
+        },
+        "parameter": {
+            "body": {
+                "certConfig": {
+                    "required": true,
+                    "description": "The configurations of the HTTPS certificate.",
+                    "type": "CertConfig"
+                },
+                "domainName": {
+                    "required": true,
+                    "description": "The domain name.",
+                    "type": "String"
+                },
+                "protocol": {
+                    "required": true,
+                    "description": "The protocol types supported by the domain name. Valid values:\nHTTPHTTP,HTTPS",
+                    "type": "String"
+                },
+                "routeConfig": {
+                    "required": true,
+                    "description": "The route table that maps paths to functions when the functions are invoked by usingthe custom domain name.",
+                    "type": "RouteConfig"
+                }
+            }
+        }
+    },
+    "DeleteCustomDomain": {
+        "method": "DELETE",
+        "path": "/custom-domains/{domainName}",
+        "description": "You can call this operation to delete a custom domain name",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191167.htm",
+            "zh": "https://help.aliyun.com/document_detail/191167.htm"
+        },
+        "parameter": {
+            "path": {
+                "domainName": {
+                    "required": true,
+                    "description": "The domain name.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "UpdateCustomDomain": {
+        "method": "PUT",
+        "path": "/custom-domains/{domainaName}",
+        "description": "You can call this operation to update a custom domain name",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191168.htm",
+            "zh": "https://help.aliyun.com/document_detail/191168.htm"
+        },
+        "parameter": {
+            "body": {
+                "certConfig": {
+                    "required": true,
+                    "description": "The configurations of the HTTPS certificate.",
+                    "type": "CertConfig"
+                },
+                "domainName": {
+                    "required": true,
+                    "description": "The domain name.",
+                    "type": "String"
+                },
+                "protocol": {
+                    "required": true,
+                    "description": "The protocol types supported by the domain name. Valid values:\nHTTPHTTP,HTTPS",
+                    "type": "String"
+                },
+                "routeConfig": {
+                    "required": true,
+                    "description": "The route table that maps paths to functions when the functions are invoked by usingthe custom domain name.",
+                    "type": "RouteConfig"
+                }
+            }
+        }
+    },
+    "GetCustomDomain": {
+        "method": "GET",
+        "path": "/custom-domains/{domainName}",
+        "description": "You can call this operation to view a custom domain name",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191169.htm",
+            "zh": "https://help.aliyun.com/document_detail/191169.htm"
+        },
+        "parameter": {
+            "path": {
+                "domainName": {
+                    "required": true,
+                    "description": "The domain name.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "ListCustomDomains": {
+        "method": "GET",
+        "path": "/custom-domains",
+        "description": "You can call this operation to view the list of custom domain names",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191170.htm",
+            "zh": "https://help.aliyun.com/document_detail/191170.htm"
+        },
+        "parameter": {
+            "query": {
+                "limit": {
+                    "required": false,
+                    "description": "The maximum number of resources to return. Default value: 20. Maximum value: 100.The number of results is less than or equal to the specified number.",
+                    "type": "Integer"
+                },
+                "nextToken": {
+                    "required": false,
+                    "description": "The token used to obtain more results. If the number of resources exceeds the limit,the nextToken parameter is returned. Include this parameter in subsequent invocationsto obtain more results. You do not need to provide this parameter in the first invocation.",
+                    "type": "String"
+                },
+                "prefix": {
+                    "required": false,
+                    "description": "The prefix that the names of returned resources must contain.",
+                    "type": "String"
+                },
+                "startKey": {
+                    "required": false,
+                    "description": "The starting position of the result list. Results are sorted in the alphabetical orderand those results following startKey (inclusive) are listed.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "PutProvisionConfig": {
+        "method": "PUT",
+        "path": "/services/{serviceName}{qualifier}/functions/{functionName}/provision-config",
+        "description": "Sets a provisioned configuration",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191172.htm",
+            "zh": "https://help.aliyun.com/document_detail/191172.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "qualifier": {
+                    "required": true,
+                    "description": "The version or alias of the service.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function.",
+                    "type": "String"
+                }
+            },
+            "body": {
+                "target": {
+                    "required": false,
+                    "description": "The expected number of provisioned instances.",
+                    "type": "Long"
+                },
+                "scheduledActions": {
+                    "required": false,
+                    "description": "The configuration of scheduled auto scaling. You can perform scheduled auto scalingto flexibly configure provisioned instances. You can configure the number of provisionedinstances to be automatically adjusted to a specified value at a specified time. Thisway, the number of provisioned instances can meet the concurrency of your business.",
+                    "type": "Array"
+                },
+                "name": {
+                    "required": false,
+                    "description": "The name of the scheduled task.",
+                    "type": "String"
+                },
+                "startTime": {
+                    "required": false,
+                    "description": "The time when the configuration of metric tracking auto scaling starts to take effect.",
+                    "type": "String"
+                },
+                "endTime": {
+                    "required": false,
+                    "description": "The time when the configuration of metric tracking auto scaling expires.",
+                    "type": "String"
+                },
+                "scheduleExpression": {
+                    "required": false,
+                    "description": "The scheduled expression that specifies when to run the scheduled task. Two formatsare supported. For more information, see the Parameters table in the \"Scheduled auto-scaling\" sectionof the Auto-scaling of reserved instances topic.",
+                    "type": "String"
+                },
+                "targetTrackingPolicies": {
+                    "required": false,
+                    "description": "The configuration of metric tracking auto scaling. Provisioned instances are scaledin or out every minute based on the concurrency utilization of provisioned instances.\nWhen the metric value exceeds the value of the metricTarget parameter, the systemscales out provisioned instances based on a progressive policy to make the metricvalue near the value of the metricTarget parameter.\nWhen the metric value is smaller than the value of the metricTarget parameter, thesystem scales in provisioned instances based on a conservative policy to make themetric value near the value of the metricTarget parameter.\nIf you specify the maximum and minimum numbers of provisioned instances, the systemscales provisioned instances within the range from the minimum number to the maximumnumber. If the number of provisioned instances is beyond the range, scaling stops.",
+                    "type": "Array"
+                },
+                "metricType": {
+                    "required": false,
+                    "description": "The type of the metric to be tracked.",
+                    "type": "String"
+                },
+                "metricTarget": {
+                    "required": false,
+                    "description": "The expected value of the metric.",
+                    "type": "double"
+                },
+                "minCapacity": {
+                    "required": false,
+                    "description": "The minimum number of provisioned instances for scale-in.",
+                    "type": "Long"
+                },
+                "maxCapacity": {
+                    "required": false,
+                    "description": "The maximum number of provisioned instances for scale-out.",
+                    "type": "Long"
+                }
+            }
+        }
+    },
+    "GetProvisionConfig": {
+        "method": "GET",
+        "path": "/services/{serviceName}{qualifier}/functions/{functionName}/provision-config",
+        "description": "Queries a provisioned configuration",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191173.htm",
+            "zh": "https://help.aliyun.com/document_detail/191173.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "qualifier": {
+                    "required": true,
+                    "description": "The version or alias of the service.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function.",
+                    "type": "String"
+                }
+            },
+            "body": {
+                "target": {
+                    "required": true,
+                    "description": "The expected number of provisioned instances.",
+                    "type": "Long"
+                }
+            }
+        }
+    },
+    "ListProvisionConfigs": {
+        "method": "GET",
+        "path": "/provision-configs",
+        "description": "Queries provisioned configurations",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191174.htm",
+            "zh": "https://help.aliyun.com/document_detail/191174.htm"
+        },
+        "parameter": {
+            "query": {
+                "limit": {
+                    "required": false,
+                    "description": "The maximum number of resources to be returned. Default value: 20. Maximum value:100. The number of returned resources is smaller than or equal to the specified number.",
+                    "type": "Long"
+                },
+                "nextToken": {
+                    "required": false,
+                    "description": "The token used to obtain more results. If the number of resources exceeds the limit,the nextToken parameter is returned. Include this parameter in subsequent calls toobtain more results. You do not need to provide this parameter in the first call.",
+                    "type": "String"
+                },
+                "serviceName": {
+                    "required": false,
+                    "description": "The name of the service.",
+                    "type": "String"
+                },
+                "qualifier": {
+                    "required": false,
+                    "description": "The version or alias of the service.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "TagResource": {
+        "method": "POST",
+        "path": "/tag",
+        "description": "You can call this operation to add tags to resources",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191176.htm",
+            "zh": "https://help.aliyun.com/document_detail/191176.htm"
+        },
+        "parameter": {
+            "body": {
+                "resourceArn": {
+                    "required": false,
+                    "description": "The Alibaba Cloud Resource Name (ARN).\nNote You can use the value of this parameter to query information about the resource, suchas the account, service, and region of the resource.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "UntagResource": {
+        "method": "DELETE",
+        "path": "/tag",
+        "description": "You can call this operation to delete tags from a resource",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191177.htm",
+            "zh": "https://help.aliyun.com/document_detail/191177.htm"
+        },
+        "parameter": {
+            "body": {
+                "resourceArn": {
+                    "required": true,
+                    "description": "The Alibaba Cloud Resource Name (ARN).\nNote You can use the value of this parameter to query information about the resource, suchas the account, service, and region of the resource.",
+                    "type": "String"
+                },
+                "tagKeys": {
+                    "required": true,
+                    "description": "The key of the tag.",
+                    "type": "Array of String"
+                },
+                "all": {
+                    "required": true,
+                    "description": "Specifies how to delete tags. Default value: false. Valid values:\nfalse: delete the specified tag.\ntrue: delete all tags.",
+                    "type": "Boolean"
+                }
+            }
+        }
+    },
+    "GetResourceTags": {
+        "method": "GET",
+        "path": "/tag",
+        "description": "You can call this operation to view all tags of a resource",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/191178.htm",
+            "zh": "https://help.aliyun.com/document_detail/191178.htm"
+        },
+        "parameter": {
+            "query": {
+                "resourceArn": {
+                    "required": true,
+                    "description": "The Alibaba Cloud Resource Name (ARN).\nNote You can use the value of this parameter to query information about the resource, suchas the account, service, and region of the resource.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "PutFunctionAsyncInvokeConfig": {
+        "method": "PUT",
+        "path": "/services/{serviceName}{qualifier}/functions/{functionName}/async-invoke-config",
+        "description": "Creates or modifies an asynchronous invocation configuration for a specific function in a service",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/181752.htm",
+            "zh": "https://help.aliyun.com/document_detail/181752.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service that contains the function for which you want to create ormodify the asynchronous invocation configuration.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function for which you want to create or modify the asynchronous invocationconfiguration.",
+                    "type": "String"
+                },
+                "qualifier": {
+                    "required": false,
+                    "description": "The alias or version of the service that contains the function for which you wantto create or modify the asynchronous invocation configuration.",
+                    "type": "String"
+                }
+            },
+            "body": {
+                "destinationConfig": {
+                    "required": false,
+                    "description": "The configuration structure of the destination for asynchronous invocation.",
+                    "type": "DestinationConfig"
+                },
+                "maxAsyncEventAgeInSeconds": {
+                    "required": false,
+                    "description": "The maximum validity period of messages. Valid values: [1,2592000]. Unit: seconds.",
+                    "type": "Long"
+                },
+                "maxAsyncRetryAttempts": {
+                    "required": false,
+                    "description": "The maximum number of retries after an asynchronous invocation fails. Default value:3. Valid values: [0,8].",
+                    "type": "Long"
+                },
+                "statefulInvocation": {
+                    "required": false,
+                    "description": "Specifies whether to enable stateful asynchronous invocation.\ntrue: Enable stateful asynchronous invocation.\nfalse: Disable stateful asynchronous invocation.",
+                    "type": "Boolean"
+                }
+            }
+        }
+    },
+    "DeleteFunctionAsyncInvokeConfig": {
+        "method": "DELETE",
+        "path": "/services/{serviceName}{qualifier}/functions/{functionName}/async-invoke-config",
+        "description": "You can call this operation to delete a specified asynchronous invocation configuration of a function in a service",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/181755.htm",
+            "zh": "https://help.aliyun.com/document_detail/181755.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service that contains the function for which you want to create orupdate the asynchronous invocation configuration.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function.",
+                    "type": "String"
+                },
+                "qualifier": {
+                    "required": false,
+                    "description": "The alias or version of the service.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "GetFunctionAsyncInvokeConfig": {
+        "method": "GET",
+        "path": "/services/{serviceName}{qualifier}/functions/{functionName}/async-invoke-config",
+        "description": "Queries an asynchronous invocation configuration of a specific function in a service",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/181753.htm",
+            "zh": "https://help.aliyun.com/document_detail/181753.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service that contains the function for which you want to query theasynchronous invocation configuration.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function for which you want to query the asynchronous invocation configuration.",
+                    "type": "String"
+                },
+                "qualifier": {
+                    "required": false,
+                    "description": "The alias or version of the service that contains the function for which you wantto query the asynchronous invocation configuration.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "ListFunctionAsyncInvokeConfigs": {
+        "method": "GET",
+        "path": "/services/{serviceName}/functions/{functionName}/async-invoke-configs",
+        "description": "Queries all asynchronous invocation configurations of a specific function in a service. If the number of configurations exceeds the value of the Limit parameter, the nextToken parameter is returned. You can use this parameter to query the next page of results",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/181754.htm",
+            "zh": "https://help.aliyun.com/document_detail/181754.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "The name of the service that contains the function for which you want to query allthe asynchronous invocation configurations.",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "The name of the function for which you want to query all the asynchronous invocationconfigurations.",
+                    "type": "String"
+                }
+            },
+            "query": {
+                "limit": {
+                    "required": false,
+                    "description": "The maximum number of configurations to be returned. Default value: 20. Maximum value:100. The number of returned configurations is less than or equal to the specifiednumber.",
+                    "type": "Integer"
+                },
+                "nextToken": {
+                    "required": false,
+                    "description": "The token used to obtain more results. If the number of configurations exceeds thelimit, the nextToken parameter is returned. Include this parameter in subsequent callsto obtain more results. You do not need to provide this parameter in the first call.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "PublishLayerVersion": {
+        "method": "POST",
+        "path": "/layers/{layerName}/versions/",
+        "description": "You can call this operation to publish a layer version",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/213190.htm",
+            "zh": "https://help.aliyun.com/document_detail/213190.htm"
+        },
+        "parameter": {
+            "path": {
+                "layerName": {
+                    "required": true,
+                    "description": "The name of the layer.",
+                    "type": "String"
+                }
+            },
+            "body": {
+                "code": {
+                    "required": false,
+                    "description": "The code of the function. The code must be packaged into a ZIP file.",
+                    "type": "Code"
+                },
+                "description": {
+                    "required": false,
+                    "description": "The description of the layer.",
+                    "type": "String"
+                },
+                "compatibleRuntime": {
+                    "required": false,
+                    "description": "The runtime environment supported by the layer. Valid values: nodejs12, nodejs10, nodejs8, nodejs6, python3, and python2.7.",
+                    "type": "Array of String"
+                }
+            }
+        }
+    },
+    "DeleteLayerVersion": {
+        "method": "DELETE",
+        "path": "/layers/{layerName}/versions/{version}",
+        "description": "You can call this operation to delete a layer version",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/213191.htm",
+            "zh": "https://help.aliyun.com/document_detail/213191.htm"
+        },
+        "parameter": {
+            "path": {
+                "layerName": {
+                    "required": true,
+                    "description": "The name of the layer.",
+                    "type": "String"
+                },
+                "version": {
+                    "required": true,
+                    "description": "The version of the layer.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "GetLayerVersion": {
+        "method": "GET",
+        "path": "/layers/{layerName}/versions/{version}",
+        "description": "You can call this operation to obtain the version information of a layer",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/213192.htm",
+            "zh": "https://help.aliyun.com/document_detail/213192.htm"
+        },
+        "parameter": {
+            "path": {
+                "layerName": {
+                    "required": true,
+                    "description": "The name of the layer.",
+                    "type": "String"
+                },
+                "version": {
+                    "required": true,
+                    "description": "The version of the layer.",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "ListLayerVersions": {
+        "method": "GET",
+        "path": "/layers/{layerName}/versions",
+        "description": "You can call this operation to obtain the list of layer versions",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/213193.htm",
+            "zh": "https://help.aliyun.com/document_detail/213193.htm"
+        },
+        "parameter": {
+            "path": {
+                "layerName": {
+                    "required": true,
+                    "description": "The name of the layer.",
+                    "type": "String"
+                }
+            },
+            "query": {
+                "startVersion": {
+                    "required": false,
+                    "description": "The initial version of the layer.",
+                    "type": "Integer"
+                },
+                "limit": {
+                    "required": false,
+                    "description": "The maximum number of resources to be returned. Default value: 20. Maximum value:100. The number of returned resources is smaller than or equal to the specified number.",
+                    "type": "Integer"
+                }
+            }
+        }
+    },
+    "ListLayers": {
+        "method": "GET",
+        "path": "/layers",
+        "description": "You can call this operation to obtain the list of layers",
+        "document": {
+            "en": "https://www.alibabacloud.com/help/en/doc-detail/213194.htm",
+            "zh": "https://help.aliyun.com/document_detail/213194.htm"
+        },
+        "parameter": {
+            "query": {
+                "prefix": {
+                    "required": false,
+                    "description": "The name prefix of the layer. The names of the returned resources must contain theprefix. If the name prefix is a, the names of the returned resources must start witha.",
+                    "type": "String"
+                },
+                "startKey": {
+                    "required": false,
+                    "description": "The name of the initial layer. The start position of the result list. Results arein alphabetical order and the results that follow startKey (inclusive) are listed.",
+                    "type": "String"
+                },
+                "nextToken": {
+                    "required": false,
+                    "description": "The token used to obtain more results. If the number of resources exceeds the limit,the nextToken parameter is returned. Include this parameter in subsequent calls toobtain more results. You do not need to provide this parameter in the first call.",
+                    "type": "String"
+                },
+                "limit": {
+                    "required": false,
+                    "description": "The maximum number of resources to be returned. Default value: 20. Maximum value:100. The number of returned resources is smaller than or equal to the specified number.",
+                    "type": "Integer"
+                }
+            }
+        }
+    }
+}

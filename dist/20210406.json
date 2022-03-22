@@ -1,0 +1,196 @@
+{
+    "ListServices": {
+        "method": "GET",
+        "path": "/services",
+        "description": "--------",
+        "document": {
+            "en": "",
+            "zh": "https://help.aliyun.com/document_detail/415722.html"
+        },
+        "parameter": {
+            "query": {
+                "limit": {
+                    "required": false,
+                    "description": "aaaa",
+                    "type": "String"
+                },
+                "nextToken": {
+                    "required": false,
+                    "description": "dfdf",
+                    "type": "String"
+                },
+                "prefix": {
+                    "required": false,
+                    "description": "dfdfd",
+                    "type": "String"
+                },
+                "startKey": {
+                    "required": false,
+                    "description": "dfd",
+                    "type": "String"
+                }
+            },
+            "header": {
+                "X-Fc-Account-Id": {
+                    "required": false,
+                    "description": "aaaa",
+                    "type": "String"
+                },
+                "X-Fc-Date": {
+                    "required": false,
+                    "description": "dfdf",
+                    "type": "String"
+                },
+                "X-Fc-Trace-Id": {
+                    "required": false,
+                    "description": "dfdfd",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "PublishServiceVersion": {
+        "method": "POST",
+        "path": "/services/{serviceName}/versions",
+        "description": "--------",
+        "document": {
+            "en": "",
+            "zh": "https://help.aliyun.com/document_detail/191160.html"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "",
+                    "type": "String"
+                }
+            },
+            "body": {
+                "description": {
+                    "required": false,
+                    "description": "",
+                    "type": "String"
+                }
+            },
+            "header": {
+                "X-Fc-Account-Id": {
+                    "required": false,
+                    "description": "aaaa",
+                    "type": "String"
+                },
+                "X-Fc-Date": {
+                    "required": false,
+                    "description": "dfdf",
+                    "type": "String"
+                },
+                "X-Fc-Trace-Id": {
+                    "required": false,
+                    "description": "dfdfd",
+                    "type": "String"
+                },
+                "If-Match": {
+                    "required": false,
+                    "description": "dfdfd",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "DeleteServiceVersion": {
+        "method": "DELETE",
+        "path": "/services/{serviceName}/versions/{versionId}",
+        "description": "--------",
+        "document": {
+            "en": "",
+            "zh": "https://help.aliyun.com/document_detail/191161.html"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "",
+                    "type": "String"
+                },
+                "versionId": {
+                    "required": true,
+                    "description": "",
+                    "type": "String"
+                }
+            },
+            "header": {
+                "X-Fc-Account-Id": {
+                    "required": false,
+                    "description": "aaaa",
+                    "type": "String"
+                },
+                "X-Fc-Date": {
+                    "required": false,
+                    "description": "dfdf",
+                    "type": "String"
+                },
+                "X-Fc-Trace-Id": {
+                    "required": false,
+                    "description": "dfdfd",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "ListServiceVersions": {
+        "method": "GET",
+        "path": "/services/{serviceName}/versions",
+        "description": "--------",
+        "document": {
+            "en": "",
+            "zh": "https://help.aliyun.com/document_detail/191162.html"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "",
+                    "type": "String"
+                }
+            },
+            "query": {
+                "limit": {
+                    "required": false,
+                    "description": "",
+                    "type": "String"
+                },
+                "nextToken": {
+                    "required": false,
+                    "description": "",
+                    "type": "String"
+                },
+                "startKey": {
+                    "required": false,
+                    "description": "",
+                    "type": "String"
+                },
+                "direction": {
+                    "required": false,
+                    "description": "",
+                    "type": "String"
+                }
+            },
+            "header": {
+                "X-Fc-Account-Id": {
+                    "required": false,
+                    "description": "aaaa",
+                    "type": "String"
+                },
+                "X-Fc-Date": {
+                    "required": false,
+                    "description": "dfdf",
+                    "type": "String"
+                },
+                "X-Fc-Trace-Id": {
+                    "required": false,
+                    "description": "dfdfd",
+                    "type": "String"
+                }
+            }
+        }
+    }
+}
