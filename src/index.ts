@@ -18,11 +18,12 @@ export default class Component {
     private headers: Object;
     private query: Object;
     private requestRegion: String;
+    private bodyType: any;
 
     constructor() {
     }
 
-    private async getClient(region, access, version = 20210406) {
+    private async getClient(region, access, version = 20210406, timeout=3000) {
         const fcCore = await loadComponent('fc-core');
         const {AccountID, AccessKeyID, AccessKeySecret, SecurityToken} = (await getCredential(access)) as any
         if (version == 20160815) {
@@ -32,13 +33,14 @@ export default class Component {
                 securityToken: SecurityToken,
                 region: region || 'cn-hangzhou',
                 timeout: 6000000,
-                endpoint: (await fcCore.getEndpointFromFcDefault()) || `${AccountID}.${region}.fc.aliyuncs.com`
+                endpoint: (await fcCore.getEndpointFromFcDefault()) || `https://${AccountID}.${region}.fc.aliyuncs.com`
             })
         } else if (version == 20210406) {
             const config = new $OpenApi.Config({
                 accessKeyId: AccessKeyID,
                 accessKeySecret: AccessKeySecret,
                 securityToken: SecurityToken,
+                readTimeout: timeout
             });
             config.endpoint = (await fcCore.getEndpointFromFcDefault()) || `${AccountID}.${region}.fc.aliyuncs.com`;
             return new FC_Open20210406(config);
@@ -119,21 +121,31 @@ export default class Component {
                 const tempOptionsContent = []
                 for (let eveArea in tempApiContent['parameter']) {
                     const tempParamter = []
-                    tempOptions.optionList.push({
-                        name: eveArea,
-                        description: `[JsonString] Parameter details refer to [Detail: --${eveArea}]`,
-                        type: String,
-                    })
-                    for (let eveParameter in tempApiContent['parameter'][eveArea]) {
-                        tempParamter.push({
-                            name: eveParameter,
-                            summary: `<${tempApiContent['parameter'][eveArea][eveParameter].type}> [${tempApiContent['parameter'][eveArea][eveParameter].required ? "Required" : "Optional"}] ${tempApiContent['parameter'][eveArea][eveParameter].description}`,
+                    if (Object.keys(tempApiContent['parameter'][eveArea]).includes('required')) {
+                        tempOptions.optionList.push({
+                            name: eveArea,
+                            description: `[${tempApiContent['parameter'][eveArea].required ? 'Required' : 'Optional'}] ${tempApiContent['parameter'][eveArea].description}`,
+                            type: String,
+                        })
+                    } else {
+                        tempOptions.optionList.push({
+                            name: eveArea,
+                            description: `Parameter details refer to [Detail: --${eveArea}], format is JSON String`,
+                            type: String,
+                        })
+                        for (let eveParameter in tempApiContent['parameter'][eveArea]) {
+                            tempParamter.push({
+                                name: eveParameter,
+                                summary: `<${tempApiContent['parameter'][eveArea][eveParameter].type}> [${tempApiContent['parameter'][eveArea][eveParameter].required ? "Required" : "Optional"}] ${tempApiContent['parameter'][eveArea][eveParameter].description}`,
+                            })
+                        }
+                    }
+                    if (tempParamter.length > 0) {
+                        tempOptionsContent.push({
+                            header: `Detail: --${eveArea}`,
+                            content: tempParamter
                         })
                     }
-                    tempOptionsContent.push({
-                        header: `Detail: --${eveArea}`,
-                        content: tempParamter
-                    })
                 }
                 tempContent.push(tempOptions)
                 tempContent = tempContent.concat(tempOptionsContent)
@@ -210,7 +222,7 @@ export default class Component {
         if (this.apiContent[this.comParse['data']['_'][0]]) {
             const apiName = this.comParse['data']['_'][0]
             const tempApiContent = this.apiContent[apiName]
-
+            this.bodyType = tempApiContent.response
             this.requestMethod = tempApiContent.method
             this.requestPath = tempApiContent.path
             const pathAttr = JSON.parse(this.comParse['data'].path || '{}')
@@ -248,7 +260,6 @@ export default class Component {
         } catch (e) {
             this.body = this.comParse['data'].body
         }
-
         this.requestRegion = this.comParse['data'].region || (await this.fcDefault.get({args: "api-default-region"})) || 'cn-hangzhou'
     }
 
@@ -271,7 +282,7 @@ export default class Component {
      */
     public async v20210416() {
         await this.getRequestData()
-        const client = await this.getClient(this.requestRegion, this.inputs.project.access, 20210406)
+        const client = await this.getClient(this.requestRegion, this.inputs.project.access, 20210406, this.comParse['data']['_'][0] == "InvokeFunction" ? 10000 : 3000)
         let req = new $OpenApi.OpenApiRequest({
             headers: this.headers,
             body: this.body,
@@ -286,7 +297,7 @@ export default class Component {
             authType: "AK",
             style: "ROA",
             reqBodyType: "json",
-            bodyType: "json",
+            bodyType: this.bodyType,
         });
         return await client.callApi(params, req, new $Util.RuntimeOptions({}))
     }

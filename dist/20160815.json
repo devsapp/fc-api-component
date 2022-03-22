@@ -512,7 +512,7 @@
     },
     "InvokeFunction": {
         "method": "POST",
-        "path": "/services/{serviceName}{qualifier}/functions/{functionName}",
+        "path": "/services/{serviceName}{qualifier}/functions/{functionName}/invocations",
         "description": "Invokes a function",
         "document": {
             "en": "https://www.alibabacloud.com/help/en/doc-detail/191156.htm",

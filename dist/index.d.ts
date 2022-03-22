@@ -10,6 +10,7 @@ export default class Component {
     private headers;
     private query;
     private requestRegion;
+    private bodyType;
     constructor();
     private getClient;
     /**

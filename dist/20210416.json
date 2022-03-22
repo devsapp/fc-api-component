@@ -2,6 +2,7 @@
     "ListReservedCapacities": {
         "method": "GET",
         "path": "/2021-04-06/reserved-capacities",
+        "response": "json",
         "description": "\u83b7\u53d6\u8d2d\u4e70\u8fc7\u7684\u9884\u4ed8\u8d39\u5b9e\u4f8b\u7684\u4fe1\u606f\u5217\u8868",
         "document": {
             "en": "English documents are not provided yet",
@@ -42,6 +43,7 @@
     "GetAccountSettings": {
         "method": "GET",
         "path": "/2021-04-06/account-settings",
+        "response": "json",
         "description": "\u8c03\u7528GetAccountSettings\u83b7\u53d6\u8d26\u6237\u4fe1\u606f",
         "document": {
             "en": "English documents are not provided yet",
@@ -70,6 +72,7 @@
     "CreateService": {
         "method": "POST",
         "path": "/2021-04-06/services",
+        "response": "json",
         "description": "\u8c03\u7528CreateService\u63a5\u53e3\u521b\u5efa\u670d\u52a1",
         "document": {
             "en": "English documents are not provided yet",
@@ -140,6 +143,7 @@
     "DeleteService": {
         "method": "DELETE",
         "path": "/2021-04-06/services/{serviceName}",
+        "response": null,
         "description": "\u8c03\u7528DeleteService\u5220\u9664\u670d\u52a1",
         "document": {
             "en": "English documents are not provided yet",
@@ -180,6 +184,7 @@
     "UpdateService": {
         "method": "PUT",
         "path": "/2021-04-06/services/{serviceName}",
+        "response": "json",
         "description": "\u8c03\u7528UpdateService\u63a5\u53e3\u66f4\u65b0\u670d\u52a1\u4fe1\u606f",
         "document": {
             "en": "English documents are not provided yet",
@@ -257,6 +262,7 @@
     "ListServices": {
         "method": "GET",
         "path": "/2021-04-06/services",
+        "response": "json",
         "description": "\u83b7\u53d6\u670d\u52a1\u5217\u8868",
         "document": {
             "en": "English documents are not provided yet",
@@ -307,6 +313,7 @@
     "GetService": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}",
+        "response": "json",
         "description": "\u8c03\u7528GetService\u67e5\u8be2\u6307\u5b9a\u7684\u670d\u52a1\u4fe1\u606f",
         "document": {
             "en": "English documents are not provided yet",
@@ -349,6 +356,7 @@
     "DeleteServiceVersion": {
         "method": "DELETE",
         "path": "/2021-04-06/services/{serviceName}/versions/{versionId}",
+        "response": null,
         "description": "\u8c03\u7528DeleteServiceVersion\u63a5\u53e3\u5220\u9664\u670d\u52a1\u7248\u672c",
         "document": {
             "en": "English documents are not provided yet",
@@ -389,6 +397,7 @@
     "PublishServiceVersion": {
         "method": "POST",
         "path": "/2021-04-06/services/{serviceName}/versions",
+        "response": "json",
         "description": "\u8c03\u7528PublishServiceVersion\u63a5\u53e3\u53d1\u5e03\u670d\u52a1\u7248\u672c",
         "document": {
             "en": "English documents are not provided yet",
@@ -436,6 +445,7 @@
     "ListServiceVersions": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}/versions",
+        "response": "json",
         "description": "\u8c03\u7528ListServiceVersions\u63a5\u53e3\u83b7\u53d6\u670d\u52a1\u7248\u672c\u5217\u8868",
         "document": {
             "en": "English documents are not provided yet",
@@ -493,6 +503,7 @@
     "CreateTrigger": {
         "method": "POST",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/triggers",
+        "response": "json",
         "description": "\u8c03\u7528CreatetTigger\u521b\u5efa\u89e6\u53d1\u5668",
         "document": {
             "en": "English documents are not provided yet",
@@ -570,6 +581,7 @@
     "DeleteTrigger": {
         "method": "DELETE",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/triggers/{triggerName}",
+        "response": null,
         "description": "\u5220\u9664\u6307\u5b9a\u7684\u89e6\u53d1\u5668",
         "document": {
             "en": "English documents are not provided yet",
@@ -620,6 +632,7 @@
     "UpdateTrigger": {
         "method": "PUT",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/triggers/{triggerName}",
+        "response": "json",
         "description": "\u66f4\u65b0\u89e6\u53d1\u5668\u4fe1\u606f",
         "document": {
             "en": "English documents are not provided yet",
@@ -692,6 +705,7 @@
     "GetTrigger": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/triggers/{triggerName}",
+        "response": "json",
         "description": "\u83b7\u53d6\u6307\u5b9a\u7684\u89e6\u53d1\u5668\u8be6\u60c5",
         "document": {
             "en": "English documents are not provided yet",
@@ -737,6 +751,7 @@
     "ListTriggers": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/triggers",
+        "response": "json",
         "description": "\u67e5\u8be2\u6307\u5b9a\u51fd\u6570\u7684\u89e6\u53d1\u5668\u5217\u8868",
         "document": {
             "en": "English documents are not provided yet",
@@ -799,6 +814,7 @@
     "CreateCustomDomain": {
         "method": "POST",
         "path": "/2021-04-06/custom-domains",
+        "response": "json",
         "description": "\u521b\u5efa\u81ea\u5b9a\u4e49\u57df\u540d",
         "document": {
             "en": "English documents are not provided yet",
@@ -849,6 +865,7 @@
     "DeleteCustomDomain": {
         "method": "DELETE",
         "path": "/2021-04-06/custom-domains/{domainName}",
+        "response": null,
         "description": "\u5220\u9664\u81ea\u5b9a\u4e49\u57df\u540d",
         "document": {
             "en": "English documents are not provided yet",
@@ -884,6 +901,7 @@
     "UpdateCustomDomain": {
         "method": "PUT",
         "path": "/2021-04-06/custom-domains/{domainName}",
+        "response": "json",
         "description": "\u66f4\u65b0\u81ea\u5b9a\u4e49\u57df\u540d",
         "document": {
             "en": "English documents are not provided yet",
@@ -936,6 +954,7 @@
     "GetCustomDomain": {
         "method": "GET",
         "path": "/2021-04-06/custom-domains/{domainName}",
+        "response": "json",
         "description": "\u83b7\u53d6\u81ea\u5b9a\u4e49\u57df\u540d\u914d\u7f6e",
         "document": {
             "en": "English documents are not provided yet",
@@ -971,6 +990,7 @@
     "ListCustomDomains": {
         "method": "GET",
         "path": "/2021-04-06/custom-domains",
+        "response": "json",
         "description": "\u83b7\u53d6\u81ea\u5b9a\u4e49\u57df\u540d\u4fe1\u606f\u5217\u8868",
         "document": {
             "en": "English documents are not provided yet",
@@ -1021,6 +1041,7 @@
     "CreateAlias": {
         "method": "POST",
         "path": "/2021-04-06/services/{serviceName}/aliases",
+        "response": "json",
         "description": "\u8c03\u7528CreateAlias\u63a5\u53e3\u521b\u5efa\u522b\u540d",
         "document": {
             "en": "English documents are not provided yet",
@@ -1078,6 +1099,7 @@
     "DeleteAlias": {
         "method": "DELETE",
         "path": "/2021-04-06/services/{serviceName}/aliases/{aliasName}",
+        "response": null,
         "description": "\u5220\u9664\u522b\u540d",
         "document": {
             "en": "English documents are not provided yet",
@@ -1123,6 +1145,7 @@
     "UpdateAlias": {
         "method": "PUT",
         "path": "/2021-04-06/services/{serviceName}/aliases/{aliasName}",
+        "response": "json",
         "description": "\u66f4\u65b0\u522b\u540d",
         "document": {
             "en": "English documents are not provided yet",
@@ -1185,6 +1208,7 @@
     "GetAlias": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}/aliases/{aliasName}",
+        "response": "json",
         "description": "\u8c03\u7528GetAlias\u63a5\u53e3\u83b7\u53d6\u522b\u540d\u4fe1\u606f",
         "document": {
             "en": "English documents are not provided yet",
@@ -1225,6 +1249,7 @@
     "ListAliases": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}/aliases",
+        "response": "json",
         "description": "\u67e5\u8be2\u522b\u540d\u4fe1\u606f\u5217\u8868",
         "document": {
             "en": "English documents are not provided yet",
@@ -1282,6 +1307,7 @@
     "CreateFunction": {
         "method": "POST",
         "path": "/2021-04-06/services/{serviceName}/functions",
+        "response": "json",
         "description": "\u8c03\u7528CreateFunction\u63a5\u53e3\u521b\u5efa\u51fd\u6570",
         "document": {
             "en": "English documents are not provided yet",
@@ -1322,6 +1348,7 @@
     "DeleteFunction": {
         "method": "DELETE",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}",
+        "response": null,
         "description": "\u8c03\u7528DeleteFunction\u5220\u9664\u51fd\u6570",
         "document": {
             "en": "English documents are not provided yet",
@@ -1367,6 +1394,7 @@
     "UpdateFunction": {
         "method": "PUT",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}",
+        "response": "json",
         "description": "\u8c03\u7528UpdateFunction\u63a5\u53e3\u66f4\u65b0\u51fd\u6570\u4fe1\u606f",
         "document": {
             "en": "English documents are not provided yet",
@@ -1417,6 +1445,7 @@
     "GetFunction": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}",
+        "response": "json",
         "description": "\u8c03\u7528GetFunction\u63a5\u53e3\u83b7\u53d6\u51fd\u6570\u4fe1\u606f",
         "document": {
             "en": "English documents are not provided yet",
@@ -1464,6 +1493,7 @@
     "GetFunctionCode": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/code",
+        "response": "json",
         "description": "\u83b7\u53d6\u51fd\u6570\u4ee3\u7801\u5305\u7684\u8be6\u60c5",
         "document": {
             "en": "English documents are not provided yet",
@@ -1511,6 +1541,7 @@
     "ListFunctions": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}/functions",
+        "response": "json",
         "description": "\u8c03\u7528ListFunctions\u63a5\u53e3\u83b7\u53d6\u51fd\u6570\u5217\u8868",
         "document": {
             "en": "English documents are not provided yet",
@@ -1573,6 +1604,7 @@
     "InvokeFunction": {
         "method": "POST",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/invocations",
+        "response": null,
         "description": "\u8c03\u7528InvokeFunction\u63a5\u53e3\u8c03\u7528\u6267\u884c\u51fd\u6570",
         "document": {
             "en": "English documents are not provided yet",
@@ -1642,6 +1674,7 @@
     "PutFunctionAsyncInvokeConfig": {
         "method": "PUT",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/async-invoke-config",
+        "response": "json",
         "description": "\u8c03\u7528Putfunctionasyncindvokeconfig\u63a5\u53e3\u521b\u5efa\u6216\u66f4\u65b0\u51fd\u6570\u7684\u5f02\u6b65\u8c03\u7528\u914d\u7f6e",
         "document": {
             "en": "English documents are not provided yet",
@@ -1711,6 +1744,7 @@
     "DeleteFunctionAsyncInvokeConfig": {
         "method": "DELETE",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/async-invoke-config",
+        "response": null,
         "description": "\u8c03\u7528DeleteFunctionAsyncInvokeConfig\u63a5\u53e3\u5220\u9664\u5f02\u6b65\u8c03\u7528\u914d\u7f6e",
         "document": {
             "en": "English documents are not provided yet",
@@ -1758,6 +1792,7 @@
     "GetFunctionAsyncInvokeConfig": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/async-invoke-config",
+        "response": "json",
         "description": "\u8c03\u7528GetFunctionAsyncInvokeConfig\u63a5\u53e3\u83b7\u53d6\u4e00\u4e2a\u670d\u52a1\u4e0b\u67d0\u4e2a\u51fd\u6570\u7684\u5f02\u6b65\u8c03\u7528\u914d\u7f6e",
         "document": {
             "en": "English documents are not provided yet",
@@ -1805,6 +1840,7 @@
     "ListFunctionAsyncInvokeConfigs": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/async-invoke-configs",
+        "response": "json",
         "description": "\u8c03\u7528Listfunctionasyncinavokeconfigs\u63a5\u53e3\u67e5\u8be2\u4e00\u4e2a\u670d\u52a1\u4e0b\u67d0\u4e2a\u51fd\u6570\u7684\u6240\u6709\u5f02\u6b65\u914d\u7f6e\u3002\u5f53\u914d\u7f6e\u4e2a\u6570\u8d85\u8fc7limit\u4e2a\u6570\u65f6\uff0c\u5c06\u8fd4\u56denexttoken\u53c2\u6570\u3002\u53ef\u4ee5\u4f7f\u7528\u8be5\u53c2\u6570\u8fdb\u884c\u540e\u7eed\u7684\u5206\u9875\u67e5\u8be2",
         "document": {
             "en": "English documents are not provided yet",
@@ -1872,6 +1908,7 @@
     "DeleteFunctionOnDemandConfig": {
         "method": "DELETE",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/on-demand-config",
+        "response": null,
         "description": "\u8c03\u7528DeleteFunctionOnDemandConfig\u63a5\u53e3\u5220\u9664\u51fd\u6570\u5e76\u53d1\u5ea6\u914d\u7f6e",
         "document": {
             "en": "English documents are not provided yet",
@@ -1924,6 +1961,7 @@
     "GetFunctionOnDemandConfig": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/on-demand-config",
+        "response": "json",
         "description": "\u83b7\u53d6\u51fd\u6570ondemandConfig\u914d\u7f6e",
         "document": {
             "en": "English documents are not provided yet",
@@ -1971,6 +2009,7 @@
     "ListOnDemandConfigs": {
         "method": "GET",
         "path": "/2021-04-06/on-demand-configs",
+        "response": "json",
         "description": "\u83b7\u53d6\u51fd\u6570ondemandConfig\u5217\u8868",
         "document": {
             "en": "English documents are not provided yet",
@@ -2021,6 +2060,7 @@
     "PutFunctionOnDemandConfig": {
         "method": "PUT",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/on-demand-config",
+        "response": "json",
         "description": "\u8c03\u7528PutFunctionOnDemandConfig\u63a5\u53e3\u521b\u5efa\u51fd\u6570\u89c4\u5219",
         "document": {
             "en": "English documents are not provided yet",
@@ -2080,6 +2120,7 @@
     "GetProvisionConfig": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/provision-config",
+        "response": "json",
         "description": "\u8c03\u7528getprovisionconfig\u63a5\u53e3\u83b7\u53d6\u9884\u7559\u914d\u7f6e",
         "document": {
             "en": "English documents are not provided yet",
@@ -2127,6 +2168,7 @@
     "ListProvisionConfigs": {
         "method": "GET",
         "path": "/2021-04-06/provision-configs",
+        "response": "json",
         "description": "\u8c03\u7528listprovisionsconfigs\u63a5\u53e3\u67e5\u8be2\u9884\u7559\u914d\u7f6e\u5217\u8868",
         "document": {
             "en": "English documents are not provided yet",
@@ -2177,6 +2219,7 @@
     "PutProvisionConfig": {
         "method": "PUT",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/provision-config",
+        "response": "json",
         "description": "\u8c03\u7528PutProvisionConfig\u63a5\u53e3\u521b\u5efa\u9884\u7559\u914d\u7f6e",
         "document": {
             "en": "English documents are not provided yet",
@@ -2241,6 +2284,7 @@
     "ListStatefulAsyncInvocationFunctions": {
         "method": "GET",
         "path": "/2021-04-06/stateful-async-invocation-functions",
+        "response": "json",
         "description": "\u8c03\u7528ListStatefulAsyncInvocationFunctions\u63a5\u53e3\u83b7\u53d6\u5f53\u524d\u8d26\u53f7\u4e0b\u6240\u6709\u5df2\u5f00\u542f\u5f02\u6b65\u4efb\u52a1\u7684\u51fd\u6570\u8d44\u6e90\u5217\u8868",
         "document": {
             "en": "English documents are not provided yet",
@@ -2281,6 +2325,7 @@
     "GetStatefulAsyncInvocation": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/stateful-async-invocations/{invocationId}",
+        "response": "json",
         "description": "\u8c03\u7528GetStatefulAsyncInvocation\u63a5\u53e3\u83b7\u53d6\u5f02\u6b65\u4efb\u52a1\u4e2d\u7b26\u5408\u67d0\u4e9b\u6761\u4ef6\u7684\u6240\u6709\u5f02\u6b65\u4efb\u52a1\u8bb0\u5f55",
         "document": {
             "en": "English documents are not provided yet",
@@ -2348,6 +2393,7 @@
     "ListStatefulAsyncInvocations": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/stateful-async-invocations",
+        "response": "json",
         "description": "\u8c03\u7528ListStatefulAsyncInvocations\u63a5\u53e3\u83b7\u53d6\u5f02\u6b65\u4efb\u52a1\u91cd\u7b26\u5408\u67d0\u4e9b\u6761\u4ef6\u7684\u6240\u6709\u5f02\u6b65\u8c03\u7528",
         "document": {
             "en": "English documents are not provided yet",
@@ -2450,6 +2496,7 @@
     "StopStatefulAsyncInvocation": {
         "method": "PUT",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/stateful-async-invocations/{invocationId}",
+        "response": null,
         "description": "\u8c03\u7528StopStatefulAsyncInvocation\u63a5\u53e3\u505c\u6b62\u5f02\u6b65\u4efb\u52a1",
         "document": {
             "en": "English documents are not provided yet",
@@ -2502,6 +2549,7 @@
     "CreateLayerVersion": {
         "method": "POST",
         "path": "/2021-04-06/layers/{layerName}/versions",
+        "response": "json",
         "description": "\u8c03\u7528CreateLayerVersion\u63a5\u53e3\u53d1\u5e03\u5c42\u7248\u672c",
         "document": {
             "en": "English documents are not provided yet",
@@ -2554,6 +2602,7 @@
     "DeleteLayerVersion": {
         "method": "DELETE",
         "path": "/2021-04-06/layers/{layerName}/versions/{version}",
+        "response": null,
         "description": "\u8c03\u7528DeleteLayerVersion\u63a5\u53e3\u5220\u9664\u5c42\u7248\u672c",
         "document": {
             "en": "English documents are not provided yet",
@@ -2594,6 +2643,7 @@
     "ListLayers": {
         "method": "GET",
         "path": "/2021-04-06/layers",
+        "response": "json",
         "description": "\u8c03\u7528ListLayers\u63a5\u53e3\u83b7\u53d6\u5c42\u5217\u8868",
         "document": {
             "en": "English documents are not provided yet",
@@ -2644,6 +2694,7 @@
     "ListLayerVersions": {
         "method": "GET",
         "path": "/2021-04-06/layers/{layerName}/versions",
+        "response": "json",
         "description": "\u8c03\u7528ListLayerVersions\u63a5\u53e3\u83b7\u53d6\u5c42\u7684\u7248\u672c\u5217\u8868",
         "document": {
             "en": "English documents are not provided yet",
@@ -2691,6 +2742,7 @@
     "GetLayerVersion": {
         "method": "GET",
         "path": "/2021-04-06/layers/{layerName}/versions/{version}",
+        "response": "json",
         "description": "\u8c03\u7528GetLayerVersion\u63a5\u53e3\u83b7\u53d6\u5c42\u7684\u7248\u672c\u4fe1\u606f",
         "document": {
             "en": "English documents are not provided yet",
@@ -2731,6 +2783,7 @@
     "ListEventSources": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/event-sources",
+        "response": "json",
         "description": "\u8c03\u7528ListEventSources\u63a5\u53e3\u83b7\u53d6\u51fd\u6570\u8ba1\u7b97\u8c03\u7528\u4e8b\u4ef6\u6e90\u5217\u8868",
         "document": {
             "en": "English documents are not provided yet",
@@ -2778,6 +2831,7 @@
     "DeregisterEventSource": {
         "method": "DELETE",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/event-sources/{sourceArn}",
+        "response": null,
         "description": "\u8c03\u7528DeregisterEventSource\u63a5\u53e3\u53d6\u6d88\u6ce8\u518c\u51fd\u6570\u8ba1\u7b97\u8c03\u7528\u4e8b\u4ef6\u6e90\u670d\u52a1",
         "document": {
             "en": "English documents are not provided yet",
@@ -2830,6 +2884,7 @@
     "RegisterEventSource": {
         "method": "POST",
         "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/event-sources",
+        "response": "json",
         "description": "\u8c03\u7528RegisterEventSource\u63a5\u53e3\u6ce8\u518c\u51fd\u6570\u8ba1\u7b97\u8c03\u7528\u4e8b\u4ef6\u6e90\u670d\u52a1",
         "document": {
             "en": "English documents are not provided yet",
@@ -2884,6 +2939,7 @@
     "CreateVpcBinding": {
         "method": "POST",
         "path": "/2021-04-06/services/{serviceName}/bindings",
+        "response": null,
         "description": "\u8c03\u7528CreateVpcBinding\u63a5\u53e3\u521b\u5efaVPC\u8fde\u63a5",
         "document": {
             "en": "English documents are not provided yet",
@@ -2926,6 +2982,7 @@
     "DeleteVpcBinding": {
         "method": "DELETE",
         "path": "/2021-04-06/services/{serviceName}/bindings/{vpcId}",
+        "response": null,
         "description": "\u5220\u9664\u6307\u5b9aVPC\u9632\u706b\u5899\u7b56\u7565\u7ec4\u7684\u8bbf\u95ee\u63a7\u5236\u7b56",
         "document": {
             "en": "English documents are not provided yet",
@@ -2966,6 +3023,7 @@
     "ListVpcBindings": {
         "method": "GET",
         "path": "/2021-04-06/services/{serviceName}/bindings",
+        "response": "json",
         "description": "\u8c03\u7528ListVpcBindings\u63a5\u53e3\u67e5\u8be2\u5df2\u521b\u5efa\u7684VPC\u8fde\u63a5",
         "document": {
             "en": "English documents are not provided yet",
@@ -3001,6 +3059,7 @@
     "GetResourceTags": {
         "method": "GET",
         "path": "/2021-04-06/tag",
+        "response": "json",
         "description": "\u83b7\u53d6\u6307\u5b9a\u8d44\u6e90\u6240\u6709\u7684\u6807\u7b7e\u4fe1\u606f",
         "document": {
             "en": "English documents are not provided yet",
@@ -3036,6 +3095,7 @@
     "ListTaggedResources": {
         "method": "GET",
         "path": "/2021-04-06/tags",
+        "response": "json",
         "description": "\u5217\u51fa\u6240\u6709\u88ab\u6253\u6807\u7b7e\u7684\u670d",
         "document": {
             "en": "English documents are not provided yet",
@@ -3076,6 +3136,7 @@
     "TagResource": {
         "method": "POST",
         "path": "/2021-04-06/tag",
+        "response": null,
         "description": "\u7ed9\u6307\u5b9a\u8d44\u6e90\u6253\u6807\u7b7e",
         "document": {
             "en": "English documents are not provided yet",
@@ -3116,6 +3177,7 @@
     "UntagResource": {
         "method": "DELETE",
         "path": "/2021-04-06/tag",
+        "response": null,
         "description": "\u5220\u9664\u8d44\u6e90\u7684\u6807\u7b7e",
         "document": {
             "en": "English documents are not provided yet",
