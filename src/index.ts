@@ -23,6 +23,7 @@ export default class Component {
     }
 
     private async getClient(region, access, version = 20210406) {
+        const fcCore = await loadComponent('fc-core');
         const {AccountID, AccessKeyID, AccessKeySecret, SecurityToken} = (await getCredential(access)) as any
         if (version == 20160815) {
             return new fc(AccountID, {
@@ -30,7 +31,8 @@ export default class Component {
                 accessKeySecret: AccessKeySecret,
                 securityToken: SecurityToken,
                 region: region || 'cn-hangzhou',
-                timeout: 6000000
+                timeout: 6000000,
+                endpoint: (await fcCore.getEndpointFromFcDefault()) || `${AccountID}.${region}.fc.aliyuncs.com`
             })
         } else if (version == 20210406) {
             const config = new $OpenApi.Config({
@@ -38,7 +40,7 @@ export default class Component {
                 accessKeySecret: AccessKeySecret,
                 securityToken: SecurityToken,
             });
-            config.endpoint = `${AccountID}.${region}.fc.aliyuncs.com`;
+            config.endpoint = (await fcCore.getEndpointFromFcDefault()) || `${AccountID}.${region}.fc.aliyuncs.com`;
             return new FC_Open20210406(config);
         }
     }
@@ -50,7 +52,6 @@ export default class Component {
      */
     public async index(inputs: InputProps) {
         this.inputs = inputs
-        console.log(inputs)
         this.fcDefault = await loadComponent('fc-default');
         const apts = {
             boolean: ['help'],
