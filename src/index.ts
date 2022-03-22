@@ -1,8 +1,13 @@
 import {InputProps} from './common/entity';
+// @ts-ignore
 import fc from '@alicloud/fc2'
+// @ts-ignore
 import {getCredential, commandParse, help, loadComponent} from '@serverless-devs/core'
+// @ts-ignore
 import FC_Open20210406 from '@alicloud/fc-open20210406';
+// @ts-ignore
 import * as $OpenApi from '@alicloud/openapi-client';
+// @ts-ignore
 import * as $Util from '@alicloud/tea-util';
 import fs from 'fs'
 import path from 'path'
@@ -23,7 +28,7 @@ export default class Component {
     constructor() {
     }
 
-    private async getClient(region, access, version = 20210406, timeout=3000) {
+    private async getClient(region, access, version = 20210406, timeout = 3000) {
         const fcCore = await loadComponent('fc-core');
         const {AccountID, AccessKeyID, AccessKeySecret, SecurityToken} = (await getCredential(access)) as any
         if (version == 20160815) {
@@ -79,6 +84,9 @@ export default class Component {
         }
         this.apiContent = JSON.parse(apiContentAttr);
 
+        if (!this.apiContent[this.comParse['data']['_'][0]]) {
+            this.comParse['data'].help = true
+        }
 
         // @ts-ignore
         if (this.comParse['data'] && this.comParse['data'].help) {
@@ -210,11 +218,13 @@ export default class Component {
             return;
         }
 
+
+
         if (String(version) == "20160815") {
-            return await this.v20160815()
-        } else {
-            return await this.v20210416()
-        }
+                return await this.v20160815()
+            } else {
+                return await this.v20210416()
+            }
 
     }
 
