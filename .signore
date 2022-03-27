@@ -1,3 +1,4 @@
+node_modules
 .s
 LICENSE
 package-lock.json
@@ -7,17 +8,23 @@ package-lock.json
 .eslintignore
 .editorconfig
 .gitignore
+.signore
+jest.config.ts
+jest.setup.ts
+tsconfig.*
 
 .github
 .idea
 .vscode
 .DS_Store
 .git
-.env
+*.md
 
 README.md
-./examples
-./test
-./Makefile
-./f2elint.config.js
-./commitlint.config.js
+examples
+test
+Makefile
+f2elint.config.js
+commitlint.config.js
+docs
+src
