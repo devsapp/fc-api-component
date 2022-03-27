@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da896773-3495-4208-8156-563f43896cf3" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/registry-publish.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/registry-publish.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.signore" beforeDir="false" afterPath="$PROJECT_DIR$/.signore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publish.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/publish.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1647832646098</updated>
       <workItem from="1647832647938" duration="46488000" />
-      <workItem from="1648354062236" duration="1076000" />
+      <workItem from="1648354062236" duration="1714000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1647951313397</created>
@@ -124,7 +128,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648355076738</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update">
+      <created>1648355213937</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1648355213937</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update">
+      <created>1648355460041</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1648355460041</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,10 +165,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1648355082367">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1648355464245">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1648355082367" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1648355464245" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
