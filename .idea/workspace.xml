@@ -20,13 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da896773-3495-4208-8156-563f43896cf3" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/registry-publish.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/registry-publish.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start-application/hook/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/start-application/publish.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/start-application/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/start-application/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/start-application/src/s.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/start-application/version.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/20160815.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/20210416.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/common/entity.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/common/entity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/common/logger.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/common/logger.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publish.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/publish.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +57,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -80,6 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1647832646098</updated>
       <workItem from="1647832647938" duration="46488000" />
+      <workItem from="1648354062236" duration="793000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1647951313397</created>
@@ -132,6 +137,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
@@ -149,13 +155,11 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/node_modules/@alicloud/fc-open20210406/src/client.ts</url>
           <line>4</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/index.ts</url>
           <line>280</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
