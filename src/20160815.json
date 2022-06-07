@@ -271,6 +271,36 @@
           "required": false,
           "description": "The port on which the HTTP server listens for the custom runtime or custom containerruntime.",
           "type": "Integer"
+        },
+        "environmentVariables": {
+          "required": false,
+          "description": "Environment variables for functions.",
+          "type": "Object"
+        },
+        "instanceConcurrency": {
+          "required": false,
+          "description": "The maximum concurrency of the instance.",
+          "type": "integer"
+        },
+        "instanceType": {
+          "required": false,
+          "description": "Instance type of function.",
+          "type": "string"
+        },
+        "instanceLifecycleConfig": {
+          "required": false,
+          "description": "Instance lifecycle configuration.",
+          "type": "InstanceLifecycleConfig"
+        },
+        "customDNS": {
+          "required": false,
+          "description": "DNS configuration of customdn service.",
+          "type": "CustomDNS"
+        },
+        "customRuntimeConfig": {
+          "required": false,
+          "description": "Detailed configuration of the custom runtime function.",
+          "type": "CustomRuntimeConfig"
         }
       },
       "header": {
@@ -354,11 +384,6 @@
           "description": "The description of the function.",
           "type": "String"
         },
-        "environmentVariables": {
-          "required": false,
-          "description": "The environment variables configured for the function. The values of the environmentvariables are obtained from the function. For more information, see Overview.",
-          "type": "Map"
-        },
         "handler": {
           "required": false,
           "description": "The handler of the function. The format is determined by the programming language.For more information, see Function handlers.",
@@ -393,6 +418,36 @@
           "required": false,
           "description": "The port on which the HTTP server listens for the custom runtime or custom containerruntime.",
           "type": "Integer"
+        },
+        "environmentVariables": {
+          "required": false,
+          "description": "Environment variables for functions.",
+          "type": "Object"
+        },
+        "instanceConcurrency": {
+          "required": false,
+          "description": "The maximum concurrency of the instance.",
+          "type": "integer"
+        },
+        "instanceType": {
+          "required": false,
+          "description": "Instance type of function.",
+          "type": "string"
+        },
+        "instanceLifecycleConfig": {
+          "required": false,
+          "description": "Instance lifecycle configuration.",
+          "type": "InstanceLifecycleConfig"
+        },
+        "customDNS": {
+          "required": false,
+          "description": "DNS configuration of customdn service.",
+          "type": "CustomDNS"
+        },
+        "customRuntimeConfig": {
+          "required": false,
+          "description": "Detailed configuration of the custom runtime function.",
+          "type": "CustomRuntimeConfig"
         }
       },
       "header": {
