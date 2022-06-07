@@ -28,7 +28,7 @@ export default class Component {
     constructor() {
     }
 
-    private async getClient(region, access, version = 20210406, timeout = 30 * 1000) {
+    private async getClient(region, access, version = 20210406, timeout = 6000000) {
         const fcCore = await loadComponent('fc-core');
         const { AccountID, AccessKeyID, AccessKeySecret, SecurityToken } = (await getCredential(access)) as any
         if (version == 20160815) {
@@ -37,7 +37,7 @@ export default class Component {
                 accessKeySecret: AccessKeySecret,
                 securityToken: SecurityToken,
                 region: region || 'cn-hangzhou',
-                timeout: 6000000,
+                timeout,
                 endpoint: (await fcCore.getEndpointFromFcDefault()) || `https://${AccountID}.${region}.fc.aliyuncs.com`
             })
         } else if (version == 20210406) {
