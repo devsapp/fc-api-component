@@ -17,7 +17,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -58,7 +58,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -129,7 +129,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -170,7 +170,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -248,7 +248,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -277,7 +277,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -335,7 +335,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -383,7 +383,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -431,7 +431,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -467,7 +467,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -567,7 +567,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -618,7 +618,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -691,7 +691,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -737,7 +737,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -778,7 +778,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -823,23 +823,28 @@
     "parameter": {
       "body": {
         "domainName": {
-          "required": false,
-          "description": "\u57df\u540d\u3002",
+          "required": true,
+          "description": "domain name",
           "type": "String"
         },
         "protocol": {
-          "required": false,
-          "description": "",
+          "required": true,
+          "description": "Protocol types supported by domain name",
           "type": "String"
         },
         "routeConfig": {
-          "required": false,
+          "required": true,
           "description": "A short description of struct",
           "type": "Object"
         },
         "certConfig": {
           "required": false,
-          "description": "HTTPS \u8bc1\u4e66\u914d\u7f6e",
+          "description": "HTTPS certificate configuration",
+          "type": "Object"
+        },
+        "tlsConfig": {
+          "required": false,
+          "description": "TLS configuration information",
           "type": "Object"
         }
       },
@@ -851,7 +856,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -887,7 +892,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -940,7 +945,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -976,7 +981,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1005,7 +1010,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1085,7 +1090,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1131,7 +1136,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1194,7 +1199,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1235,7 +1240,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1271,7 +1276,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1316,7 +1321,7 @@
     "parameter": {
       "path": {
         "serviceName": {
-          "required": false,
+          "required": true,
           "description": "\u670d\u52a1\u540d\u79f0",
           "type": "String"
         }
@@ -1334,13 +1339,105 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
           "required": false,
           "description": "\u81ea\u5b9a\u4e49\u8bf7\u6c42ID\u3002",
           "type": "String"
+        }
+      },
+      "body": {
+        "code": {
+          "required": false,
+          "description": "The code of the function. The code must be packaged into a ZIP file.",
+          "type": "Code"
+        },
+        "customContainerConfig": {
+          "required": false,
+          "description": "The configuration of the custom container runtime. After you configure the customcontainer runtime, you can use custom container images to execute functions.",
+          "type": "CustomContainerConfig"
+        },
+        "layers": {
+          "required": false,
+          "description": "The name of the layer resource.",
+          "type": "Array of String"
+        },
+        "description": {
+          "required": false,
+          "description": "The description of the function.",
+          "type": "String"
+        },
+        "functionName": {
+          "required": true,
+          "description": "The name of the function.",
+          "type": "String"
+        },
+        "handler": {
+          "required": true,
+          "description": "The handler of the function. The format is determined by the programming language.For more information, see Function handlers.",
+          "type": "String"
+        },
+        "initializationTimeout": {
+          "required": false,
+          "description": "The timeout period for the execution of the initializer function. Unit: seconds. Defaultvalue: 3. Valid values: 1 to 300. When this period expires, the execution of the initializerfunction is terminated.",
+          "type": "Integer"
+        },
+        "initializer": {
+          "required": false,
+          "description": "The handler of the initializer function. The format is determined by the programminglanguage. For more information, see Initializer function.",
+          "type": "String"
+        },
+        "memorySize": {
+          "required": false,
+          "description": "The memory size of the function. Unit: MB. The memory size must be a multiple of 64MB. Instance types have different memory specifications. For more information, seeInstance types.",
+          "type": "Integer"
+        },
+        "runtime": {
+          "required": false,
+          "description": "The runtime environment of the function. Valid values: nodejs6, nodejs8, nodejs10, nodejs12, python2.7, python3, java8, java11, php7.2, dotnetcore2.1, custom runtime, and custom container.",
+          "type": "String"
+        },
+        "timeout": {
+          "required": false,
+          "description": "The timeout period for the execution of the function. Unit: seconds. Default value:60. Valid values: 1 to 86400. When this period expires, the execution of the functionis terminated.",
+          "type": "Integer"
+        },
+        "caPort": {
+          "required": false,
+          "description": "The port on which the HTTP server listens for the custom runtime or custom containerruntime.",
+          "type": "Integer"
+        },
+        "environmentVariables": {
+          "required": false,
+          "description": "Environment variables for functions.",
+          "type": "Object"
+        },
+        "instanceConcurrency": {
+          "required": false,
+          "description": "The maximum concurrency of the instance.",
+          "type": "integer"
+        },
+        "instanceType": {
+          "required": false,
+          "description": "Instance type of function.",
+          "type": "string"
+        },
+        "instanceLifecycleConfig": {
+          "required": false,
+          "description": "Instance lifecycle configuration.",
+          "type": "InstanceLifecycleConfig"
+        },
+        "customDNS": {
+          "required": false,
+          "description": "DNS configuration of customdn service.",
+          "type": "CustomDNS"
+        },
+        "customRuntimeConfig": {
+          "required": false,
+          "description": "Detailed configuration of the custom runtime function.",
+          "type": "CustomRuntimeConfig"
         }
       }
     }
@@ -1380,7 +1477,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1431,13 +1528,100 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
           "required": false,
           "description": "\u81ea\u5b9a\u4e49\u8bf7\u6c42ID\u3002",
           "type": "String"
+        }
+      },
+      "body": {
+        "code": {
+          "required": false,
+          "description": "The code of the function. The code must be packaged into a ZIP file.",
+          "type": "Code"
+        },
+        "customContainerConfig": {
+          "required": false,
+          "description": "The configuration of the custom container. After you configure the custom containerruntime, you can use custom container images to execute functions.",
+          "type": "CustomContainerConfig"
+        },
+        "layers": {
+          "required": false,
+          "description": "The name of the layer resource.",
+          "type": "Array of String"
+        },
+        "description": {
+          "required": false,
+          "description": "The description of the function.",
+          "type": "String"
+        },
+        "handler": {
+          "required": false,
+          "description": "The handler of the function. The format is determined by the programming language.For more information, see Function handlers.",
+          "type": "String"
+        },
+        "memorySize": {
+          "required": false,
+          "description": "The memory size of the function. Unit: MB. The memory size is a multiple of 64 MB.Instance types have different memory specifications. For more information, see Instance types.",
+          "type": "Integer"
+        },
+        "runtime": {
+          "required": false,
+          "description": "The runtime environment of the function. Valid values: nodejs6, nodejs8, nodejs10, nodejs12, python2.7, python3, java8, java11, php7.2, dotnetcore2.1, custom runtime, and custom container.",
+          "type": "String"
+        },
+        "timeout": {
+          "required": false,
+          "description": "The timeout period for the execution of the function. Unit: seconds. Default value:60. Valid values: 1 to 86400. When this period expires, the execution of the functionis terminated.",
+          "type": "String"
+        },
+        "initializationTimeout": {
+          "required": false,
+          "description": "The timeout period for the execution of the initializer function. Unit: seconds. Defaultvalue: 3. Valid values: 1 to 300. When this period expires, the execution of the initializerfunction is terminated.",
+          "type": "Integer"
+        },
+        "initializer": {
+          "required": false,
+          "description": "The handler of the initializer function. The format is determined by the programminglanguage. For more information, see Initializer function.",
+          "type": "String"
+        },
+        "caPort": {
+          "required": false,
+          "description": "The port on which the HTTP server listens for the custom runtime or custom containerruntime.",
+          "type": "Integer"
+        },
+        "environmentVariables": {
+          "required": false,
+          "description": "Environment variables for functions.",
+          "type": "Object"
+        },
+        "instanceConcurrency": {
+          "required": false,
+          "description": "The maximum concurrency of the instance.",
+          "type": "integer"
+        },
+        "instanceType": {
+          "required": false,
+          "description": "Instance type of function.",
+          "type": "string"
+        },
+        "instanceLifecycleConfig": {
+          "required": false,
+          "description": "Instance lifecycle configuration.",
+          "type": "InstanceLifecycleConfig"
+        },
+        "customDNS": {
+          "required": false,
+          "description": "DNS configuration of customdn service.",
+          "type": "CustomDNS"
+        },
+        "customRuntimeConfig": {
+          "required": false,
+          "description": "Detailed configuration of the custom runtime function.",
+          "type": "CustomRuntimeConfig"
         }
       }
     }
@@ -1472,7 +1656,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1520,7 +1704,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1563,7 +1747,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1653,7 +1837,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1723,7 +1907,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1771,7 +1955,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1819,7 +2003,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1882,7 +2066,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1940,7 +2124,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -1988,7 +2172,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -2024,7 +2208,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -2099,7 +2283,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -2147,7 +2331,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -2183,7 +2367,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -2263,7 +2447,7 @@
         },
         "X-Fc-Date": {
           "required": false,
-          "description": "\u51fd\u6570\u7684\u8c03\u7528\u5f00\u59cb\u65e5\u671f\uff0c\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+          "description": "函数计算的API被调用的时间，格式为EEE,d MMM yyyy HH:mm:ss GMT。",
           "type": "String"
         },
         "X-Fc-Trace-Id": {
@@ -2575,7 +2759,7 @@
           "type": "Array"
         },
         "Code": {
-          "required": false,
+          "required": true,
           "description": "A short description of struct",
           "type": "Object"
         }
@@ -2780,162 +2964,6 @@
       }
     }
   },
-  "ListEventSources": {
-    "method": "GET",
-    "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/event-sources",
-    "response": "json",
-    "description": "\u8c03\u7528ListEventSources\u63a5\u53e3\u83b7\u53d6\u51fd\u6570\u8ba1\u7b97\u8c03\u7528\u4e8b\u4ef6\u6e90\u5217\u8868",
-    "document": {
-      "en": "English documents are not provided yet",
-      "zh": "https://help.aliyun.com/document_detail/415779.htm"
-    },
-    "parameter": {
-      "path": {
-        "serviceName": {
-          "required": true,
-          "description": "\u670d\u52a1\u540d\u79f0",
-          "type": "String"
-        },
-        "functionName": {
-          "required": true,
-          "description": "\u51fd\u6570\u540d\u79f0",
-          "type": "String"
-        }
-      },
-      "header": {
-        "X-Fc-Account-Id": {
-          "required": false,
-          "description": "\u60a8\u7684\u963f\u91cc\u4e91\u8d26\u53f7\uff08\u4e3b\u8d26\u53f7\uff09ID\u3002",
-          "type": "String"
-        },
-        "X-Fc-Date": {
-          "required": false,
-          "description": "\u53d1\u8d77API\u8c03\u7528\u7684\u65e5\u671f\uff0c\u7528\u4e8e\u5bf9\u8bf7\u6c42\u7b7e\u540d\u3002\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
-          "type": "String"
-        },
-        "X-Fc-Trace-Id": {
-          "required": false,
-          "description": "\u7528\u4e8e\u94fe\u8def\u8ffd\u8e2a\u7684ID\u3002",
-          "type": "String"
-        }
-      },
-      "query": {
-        "qualifier": {
-          "required": false,
-          "description": "\u522b\u540d\u6216\u7248\u672c",
-          "type": "String"
-        }
-      }
-    }
-  },
-  "DeregisterEventSource": {
-    "method": "DELETE",
-    "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/event-sources/{sourceArn}",
-    "response": null,
-    "description": "\u8c03\u7528DeregisterEventSource\u63a5\u53e3\u53d6\u6d88\u6ce8\u518c\u51fd\u6570\u8ba1\u7b97\u8c03\u7528\u4e8b\u4ef6\u6e90\u670d\u52a1",
-    "document": {
-      "en": "English documents are not provided yet",
-      "zh": "https://help.aliyun.com/document_detail/415780.htm"
-    },
-    "parameter": {
-      "path": {
-        "serviceName": {
-          "required": true,
-          "description": "\u670d\u52a1\u540d\u79f0",
-          "type": "String"
-        },
-        "functionName": {
-          "required": true,
-          "description": "\u51fd\u6570\u540d\u79f0",
-          "type": "String"
-        },
-        "sourceArn": {
-          "required": false,
-          "description": "\u4e8b\u4ef6\u6e90\u8d44\u6e90\u6807\u8bc6\u7b26",
-          "type": "String"
-        }
-      },
-      "header": {
-        "X-Fc-Account-Id": {
-          "required": false,
-          "description": "\u60a8\u7684\u963f\u91cc\u4e91\u8d26\u53f7\uff08\u4e3b\u8d26\u53f7\uff09ID\u3002",
-          "type": "String"
-        },
-        "X-Fc-Date": {
-          "required": false,
-          "description": "\u53d1\u8d77API\u8c03\u7528\u7684\u65e5\u671f\uff0c\u7528\u4e8e\u5bf9\u8bf7\u6c42\u7b7e\u540d\u3002\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
-          "type": "String"
-        },
-        "X-Fc-Trace-Id": {
-          "required": false,
-          "description": "\u7528\u4e8e\u94fe\u8def\u8ffd\u8e2a\u7684ID\u3002",
-          "type": "String"
-        }
-      },
-      "query": {
-        "qualifier": {
-          "required": false,
-          "description": "\u522b\u540d\u6216\u7248\u672c",
-          "type": "String"
-        }
-      }
-    }
-  },
-  "RegisterEventSource": {
-    "method": "POST",
-    "path": "/2021-04-06/services/{serviceName}/functions/{functionName}/event-sources",
-    "response": "json",
-    "description": "\u8c03\u7528RegisterEventSource\u63a5\u53e3\u6ce8\u518c\u51fd\u6570\u8ba1\u7b97\u8c03\u7528\u4e8b\u4ef6\u6e90\u670d\u52a1",
-    "document": {
-      "en": "English documents are not provided yet",
-      "zh": "https://help.aliyun.com/document_detail/415781.htm"
-    },
-    "parameter": {
-      "path": {
-        "serviceName": {
-          "required": true,
-          "description": "\u670d\u52a1\u540d\u79f0",
-          "type": "String"
-        },
-        "functionName": {
-          "required": true,
-          "description": "\u51fd\u6570\u540d\u79f0",
-          "type": "String"
-        }
-      },
-      "body": {
-        "sourceArn": {
-          "required": false,
-          "description": "\u4e8b\u4ef6\u6e90\u8d44\u6e90\u6807\u8bc6\u7b26",
-          "type": "String"
-        }
-      },
-      "header": {
-        "X-Fc-Account-Id": {
-          "required": false,
-          "description": "\u60a8\u7684\u963f\u91cc\u4e91\u8d26\u53f7\uff08\u4e3b\u8d26\u53f7\uff09ID\u3002",
-          "type": "String"
-        },
-        "X-Fc-Date": {
-          "required": false,
-          "description": "\u53d1\u8d77API\u8c03\u7528\u7684\u65e5\u671f\uff0c\u7528\u4e8e\u5bf9\u8bf7\u6c42\u7b7e\u540d\u3002\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
-          "type": "String"
-        },
-        "X-Fc-Trace-Id": {
-          "required": false,
-          "description": "\u7528\u4e8e\u94fe\u8def\u8ffd\u8e2a\u7684ID\u3002",
-          "type": "String"
-        }
-      },
-      "query": {
-        "qualifier": {
-          "required": false,
-          "description": "\u522b\u540d\u6216\u7248\u672c",
-          "type": "String"
-        }
-      }
-    }
-  },
   "CreateVpcBinding": {
     "method": "POST",
     "path": "/2021-04-06/services/{serviceName}/bindings",
@@ -2948,14 +2976,14 @@
     "parameter": {
       "path": {
         "serviceName": {
-          "required": false,
+          "required": true,
           "description": "A short description of struct",
           "type": "String"
         }
       },
       "body": {
         "vpcId": {
-          "required": false,
+          "required": true,
           "description": "VPC\u7684ID\u4fe1\u606f",
           "type": "String"
         }
@@ -3145,13 +3173,13 @@
     "parameter": {
       "body": {
         "resourceArn": {
-          "required": false,
-          "description": "Resource ARN \u5168\u79f0\u6216\u8005\u7b80\u79f0",
+          "required": true,
+          "description": "Identification of Alibaba cloud resources.",
           "type": "String"
         },
         "tags": {
-          "required": false,
-          "description": "",
+          "required": true,
+          "description": "Label dictionary.",
           "type": "Map"
         }
       },

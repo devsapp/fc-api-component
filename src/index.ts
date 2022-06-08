@@ -1,8 +1,8 @@
-import {InputProps} from './common/entity';
+import { InputProps } from './common/entity';
 // @ts-ignore
 import fc from '@alicloud/fc2'
 // @ts-ignore
-import {getCredential, commandParse, help, loadComponent} from '@serverless-devs/core'
+import { getCredential, commandParse, help, loadComponent } from '@serverless-devs/core'
 // @ts-ignore
 import FC_Open20210406 from '@alicloud/fc-open20210406';
 // @ts-ignore
@@ -28,16 +28,16 @@ export default class Component {
     constructor() {
     }
 
-    private async getClient(region, access, version = 20210406, timeout = 3000) {
+    private async getClient(region, access, version = 20210406, timeout = 6000000) {
         const fcCore = await loadComponent('fc-core');
-        const {AccountID, AccessKeyID, AccessKeySecret, SecurityToken} = (await getCredential(access)) as any
+        const { AccountID, AccessKeyID, AccessKeySecret, SecurityToken } = (await getCredential(access)) as any
         if (version == 20160815) {
             return new fc(AccountID, {
                 accessKeyID: AccessKeyID,
                 accessKeySecret: AccessKeySecret,
                 securityToken: SecurityToken,
                 region: region || 'cn-hangzhou',
-                timeout: 6000000,
+                timeout,
                 endpoint: (await fcCore.getEndpointFromFcDefault()) || `https://${AccountID}.${region}.fc.aliyuncs.com`
             })
         } else if (version == 20210406) {
@@ -62,14 +62,14 @@ export default class Component {
         this.fcDefault = await loadComponent('fc-default');
         const apts = {
             boolean: ['help'],
-            alias: {help: 'h'},
+            alias: { help: 'h' },
         };
         // @ts-ignore
-        this.comParse = commandParse({args: inputs.args, argsObj: inputs.argsObj}, apts);
+        this.comParse = commandParse({ args: inputs.args, argsObj: inputs.argsObj }, apts);
 
         // 读取Json配置
         let apiContentAttr
-        const version = this.comParse['data']['apiVersion'] || await this.fcDefault.get({args: "api-default-version"}) || '20160815'
+        const version = this.comParse['data']['apiVersion'] || await this.fcDefault.get({ args: "api-default-version" }) || '20160815'
         if (version == '20160815' || version == 20160815) {
             apiContentAttr = fs.readFileSync(path.join(__dirname, "20160815.json"));
         } else if (version == '20210416' || version == 20210416) {
@@ -113,7 +113,7 @@ export default class Component {
                     header: `Options`,
                     optionList: [{
                         name: 'region',
-                        description: `[Required] Specify the fc region, value: cn-hangzhou/cn-beijing/cn-beijing/cn-hangzhou/cn-shanghai/cn-qingdao/cn-zhangjiakou/cn-huhehaote/cn-shenzhen/cn-chengdu/cn-hongkong/ap-southeast-1/ap-southeast-2/ap-southeast-3/ap-southeast-5/ap-northeast-1/eu-central-1/eu-west-1/us-west-1/us-east-1/ap-south-1\n* Set default region: [s cli fc-default set api-default-region <region>]`,
+                        description: `[Required] Specify the fc region, value: cn-hangzhou/cn-beijing/cn-shanghai/cn-qingdao/cn-zhangjiakou/cn-huhehaote/cn-shenzhen/cn-chengdu/cn-hongkong/ap-southeast-1/ap-southeast-2/ap-southeast-3/ap-southeast-5/ap-northeast-1/eu-central-1/eu-west-1/us-west-1/us-east-1/ap-south-1\n* Set default region: [s cli fc-default set api-default-region <region>]`,
                         type: String,
                     }, {
                         name: 'access',
@@ -221,10 +221,10 @@ export default class Component {
 
 
         if (String(version) == "20160815") {
-                return await this.v20160815()
-            } else {
-                return await this.v20210416()
-            }
+            return await this.v20160815()
+        } else {
+            return await this.v20210416()
+        }
 
     }
 
@@ -270,7 +270,7 @@ export default class Component {
         } catch (e) {
             this.body = this.comParse['data'].body
         }
-        this.requestRegion = this.comParse['data'].region || (await this.fcDefault.get({args: "api-default-region"})) || 'cn-hangzhou'
+        this.requestRegion = this.comParse['data'].region || (await this.fcDefault.get({ args: "api-default-region" })) || 'cn-hangzhou'
     }
 
     /**
