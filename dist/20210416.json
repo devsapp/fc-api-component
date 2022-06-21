@@ -2101,12 +2101,12 @@
         "parameter": {
             "path": {
                 "serviceName": {
-                    "required": false,
+                    "required": true,
                     "description": "\u670d\u52a1\u540d\u79f0",
                     "type": "String"
                 },
                 "functionName": {
-                    "required": false,
+                    "required": true,
                     "description": "\u51fd\u6570\u540d\u79f0",
                     "type": "String"
                 }
@@ -2135,7 +2135,7 @@
             },
             "query": {
                 "qualifier": {
-                    "required": false,
+                    "required": true,
                     "description": "\u9650\u5b9a\u7b26",
                     "type": "String"
                 }
@@ -2154,12 +2154,12 @@
         "parameter": {
             "path": {
                 "serviceName": {
-                    "required": false,
+                    "required": true,
                     "description": "\u670d\u52a1\u540d\u79f0",
                     "type": "String"
                 },
                 "functionName": {
-                    "required": false,
+                    "required": true,
                     "description": "\u51fd\u6570\u540d\u79f0",
                     "type": "String"
                 }
@@ -2183,7 +2183,7 @@
             },
             "query": {
                 "qualifier": {
-                    "required": false,
+                    "required": true,
                     "description": "\u9650\u5b9a\u7b26",
                     "type": "String"
                 }
