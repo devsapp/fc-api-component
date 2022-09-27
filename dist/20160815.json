@@ -1876,5 +1876,392 @@
                 }
             }
         }
+    },
+    "ListVpcBindings": {
+        "method": "GET",
+        "path": "/services/{serviceName}/bindings",
+        "response": "json",
+        "description": "\u8c03\u7528ListVpcBindings\u63a5\u53e3\u67e5\u8be2\u5df2\u521b\u5efa\u7684VPC\u8fde\u63a5",
+        "document": {
+            "en": "English documents are not provided yet",
+            "zh": "https://help.aliyun.com/document_detail/415786.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "A short description of struct",
+                    "type": "String"
+                }
+            },
+            "header": {
+                "X-Fc-Account-Id": {
+                    "required": false,
+                    "description": "\u60a8\u7684\u963f\u91cc\u4e91\u8d26\u53f7\uff08\u4e3b\u8d26\u53f7\uff09ID\u3002",
+                    "type": "String"
+                },
+                "X-Fc-Date": {
+                    "required": false,
+                    "description": "\u53d1\u8d77API\u8c03\u7528\u7684\u65e5\u671f\uff0c\u7528\u4e8e\u5bf9\u8bf7\u6c42\u7b7e\u540d\u3002\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+                    "type": "String"
+                },
+                "X-Fc-Trace-Id": {
+                    "required": false,
+                    "description": "\u7528\u4e8e\u94fe\u8def\u8ffd\u8e2a\u7684ID\u3002",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "CreateVpcBinding": {
+        "method": "POST",
+        "path": "/services/{serviceName}/binding",
+        "response": null,
+        "description": "\u8c03\u7528CreateVpcBinding\u63a5\u53e3\u521b\u5efaVPC\u8fde\u63a5",
+        "document": {
+            "en": "English documents are not provided yet",
+            "zh": "https://help.aliyun.com/document_detail/415783.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "A short description of struct",
+                    "type": "String"
+                }
+            },
+            "body": {
+                "vpcId": {
+                    "required": true,
+                    "description": "VPC\u7684ID\u4fe1\u606f",
+                    "type": "String"
+                }
+            },
+            "header": {
+                "X-Fc-Account-Id": {
+                    "required": false,
+                    "description": "\u60a8\u7684\u963f\u91cc\u4e91\u8d26\u53f7\uff08\u4e3b\u8d26\u53f7\uff09ID\u3002",
+                    "type": "String"
+                },
+                "X-Fc-Date": {
+                    "required": false,
+                    "description": "\u53d1\u8d77API\u8c03\u7528\u7684\u65e5\u671f\uff0c\u7528\u4e8e\u5bf9\u8bf7\u6c42\u7b7e\u540d\u3002\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+                    "type": "String"
+                },
+                "X-Fc-Trace-Id": {
+                    "required": false,
+                    "description": "\u7528\u4e8e\u94fe\u8def\u8ffd\u8e2a\u7684ID\u3002",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "DeleteVpcBinding": {
+        "method": "DELETE",
+        "path": "/services/{serviceName}/binding",
+        "response": null,
+        "description": "\u5220\u9664\u6307\u5b9aVPC\u9632\u706b\u5899\u7b56\u7565\u7ec4\u7684\u8bbf\u95ee\u63a7\u5236\u7b56",
+        "document": {
+            "en": "English documents are not provided yet",
+            "zh": "https://help.aliyun.com/document_detail/415784.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": false,
+                    "description": "A short description of struct",
+                    "type": "String"
+                }
+            },
+            "body": {
+                "vpcId": {
+                    "required": false,
+                    "description": "VPC\u7684ID\u4fe1\u606f",
+                    "type": "String"
+                }
+            },
+            "header": {
+                "X-Fc-Account-Id": {
+                    "required": false,
+                    "description": "\u60a8\u7684\u963f\u91cc\u4e91\u8d26\u53f7\uff08\u4e3b\u8d26\u53f7\uff09ID\u3002",
+                    "type": "String"
+                },
+                "X-Fc-Date": {
+                    "required": false,
+                    "description": "\u53d1\u8d77API\u8c03\u7528\u7684\u65e5\u671f\uff0c\u7528\u4e8e\u5bf9\u8bf7\u6c42\u7b7e\u540d\u3002\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+                    "type": "String"
+                },
+                "X-Fc-Trace-Id": {
+                    "required": false,
+                    "description": "\u7528\u4e8e\u94fe\u8def\u8ffd\u8e2a\u7684ID\u3002",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "ListStatefulAsyncInvocationFunctions": {
+        "method": "GET",
+        "path": "/stateful-async-invocation-functions",
+        "response": "json",
+        "description": "\u8c03\u7528ListStatefulAsyncInvocationFunctions\u63a5\u53e3\u83b7\u53d6\u5f53\u524d\u8d26\u53f7\u4e0b\u6240\u6709\u5df2\u5f00\u542f\u5f02\u6b65\u4efb\u52a1\u7684\u51fd\u6570\u8d44\u6e90\u5217\u8868",
+        "document": {
+            "en": "English documents are not provided yet",
+            "zh": "https://help.aliyun.com/document_detail/417542.htm"
+        },
+        "parameter": {
+            "header": {
+                "X-Fc-Account-Id": {
+                    "required": false,
+                    "description": "\u60a8\u7684\u963f\u91cc\u4e91\u8d26\u53f7\uff08\u4e3b\u8d26\u53f7\uff09ID\u3002",
+                    "type": "String"
+                },
+                "X-Fc-Date": {
+                    "required": false,
+                    "description": "\u53d1\u8d77API\u8c03\u7528\u7684\u65e5\u671f\uff0c\u7528\u4e8e\u5bf9\u8bf7\u6c42\u7b7e\u540d\u3002\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+                    "type": "String"
+                },
+                "X-Fc-Trace-Id": {
+                    "required": false,
+                    "description": "\u7528\u4e8e\u94fe\u8def\u8ffd\u8e2a\u7684ID\u3002",
+                    "type": "String"
+                }
+            },
+            "query": {
+                "limit": {
+                    "required": false,
+                    "description": "\u9650\u5b9a\u6b64\u6b21\u8fd4\u56de\u8d44\u6e90\u7684\u6570\u91cf\u3002\u5982\u679c\u4e0d\u8bbe\u5b9a\uff0c\u9ed8\u8ba4\u8fd4\u56de20\uff0c\u6700\u5927\u4e0d\u80fd\u8d85\u8fc7100\u3002\u8fd4\u56de\u7ed3\u679c\u53ef\u4ee5\u5c0f\u4e8e\u6307\u5b9a\u7684\u6570\u91cf\uff0c\u4f46\u4e0d\u4f1a\u591a\u4e8e\u6307\u5b9a\u7684\u6570\u91cf\u3002",
+                    "type": "Integer"
+                },
+                "nextToken": {
+                    "required": false,
+                    "description": "\u7528\u6765\u6807\u8bb0\u5f53\u524d\u5f00\u59cb\u8bfb\u53d6\u7684\u4f4d\u7f6e\uff0c\u7f6e\u7a7a\u8868\u793a\u4ece\u5934\u5f00\u59cb\u3002\u7b2c\u4e00\u6b21\u67e5\u8be2\u4e0d\u9700\u8981\u63d0\u4f9b\u8fd9\u4e2a\u53c2\u6570\uff0c\u540e\u7eed\u67e5\u8be2\u7684Token\u4ece\u524d\u4e00\u6b21\u67e5\u8be2\u7684\u8fd4\u56de\u7ed3\u679c\u4e2d\u83b7\u53d6\u3002",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "GetStatefulAsyncInvocation": {
+        "method": "GET",
+        "path": "/services/{serviceName}/functions/{functionName}/stateful-async-invocations/{invocationId}",
+        "response": "json",
+        "description": "\u8c03\u7528GetStatefulAsyncInvocation\u63a5\u53e3\u83b7\u53d6\u5f02\u6b65\u4efb\u52a1\u4e2d\u7b26\u5408\u67d0\u4e9b\u6761\u4ef6\u7684\u6240\u6709\u5f02\u6b65\u4efb\u52a1\u8bb0\u5f55",
+        "document": {
+            "en": "English documents are not provided yet",
+            "zh": "https://help.aliyun.com/document_detail/415769.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "\u670d\u52a1\u540d\u79f0",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "\u51fd\u6570\u540d\u79f0",
+                    "type": "String"
+                },
+                "invocationId": {
+                    "required": true,
+                    "description": "\u5f02\u6b65\u4efb\u52a1\u7684ID\u3002",
+                    "type": "String"
+                }
+            },
+            "header": {
+                "X-Fc-Account-Id": {
+                    "required": false,
+                    "description": "\u60a8\u7684\u963f\u91cc\u4e91\u8d26\u53f7\uff08\u4e3b\u8d26\u53f7\uff09ID\u3002",
+                    "type": "String"
+                },
+                "X-Fc-Code-Checksum": {
+                    "required": false,
+                    "description": "\u51fd\u6570\u4ee3\u7801\u5305\u7684CRC-64\u503c\u3002",
+                    "type": "String"
+                },
+                "X-Fc-Log-Type": {
+                    "required": false,
+                    "description": "\u8bf7\u6c42\u8fd4\u56de\u65e5\u5fd7\u7c7b\u578b, Tail \u4e3a\u8fd4\u56de\u51fd\u6570\u65e5\u5fd7\u6700\u540e 4KB \u6570\u636e\uff0cNone \u6216\u7a7a\u503c\u5219\u8fd4\u56de\u4e0d\u5e26\u6709\u65e5\u5fd7\uff0c\u9ed8\u8ba4\u4e3a None",
+                    "type": "String"
+                },
+                "X-Fc-Invocation-Type": {
+                    "required": false,
+                    "description": "\u8c03\u7528\u65b9\u5f0f:Sync\u6216\u8005Async\uff0c\u9ed8\u8ba4\u503c\uff1aSync",
+                    "type": "String"
+                },
+                "X-Fc-Date": {
+                    "required": false,
+                    "description": "\u53d1\u8d77API\u8c03\u7528\u7684\u65e5\u671f\uff0c\u7528\u4e8e\u5bf9\u8bf7\u6c42\u7b7e\u540d\u3002\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+                    "type": "String"
+                },
+                "X-Fc-Trace-Id": {
+                    "required": false,
+                    "description": "\u7528\u4e8e\u94fe\u8def\u8ffd\u8e2a\u7684ID\u3002",
+                    "type": "String"
+                }
+            },
+            "query": {
+                "qualifier": {
+                    "required": false,
+                    "description": "\u522b\u540d\u540d\u79f0",
+                    "type": "String"
+                }
+            }
+        }
+    },
+    "ListStatefulAsyncInvocations": {
+        "method": "GET",
+        "path": "/services/{serviceName}/functions/{functionName}/stateful-async-invocations",
+        "response": "json",
+        "description": "\u8c03\u7528ListStatefulAsyncInvocations\u63a5\u53e3\u83b7\u53d6\u5f02\u6b65\u4efb\u52a1\u91cd\u7b26\u5408\u67d0\u4e9b\u6761\u4ef6\u7684\u6240\u6709\u5f02\u6b65\u8c03\u7528",
+        "document": {
+            "en": "English documents are not provided yet",
+            "zh": "https://help.aliyun.com/document_detail/415770.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "\u670d\u52a1\u540d\u79f0",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "\u51fd\u6570\u540d\u79f0",
+                    "type": "String"
+                }
+            },
+            "header": {
+                "X-Fc-Account-Id": {
+                    "required": false,
+                    "description": "\u60a8\u7684\u963f\u91cc\u4e91\u8d26\u53f7\uff08\u4e3b\u8d26\u53f7\uff09ID\u3002",
+                    "type": "String"
+                },
+                "X-Fc-Code-Checksum": {
+                    "required": false,
+                    "description": "\u51fd\u6570\u4ee3\u7801\u5305\u7684CRC-64\u503c\u3002",
+                    "type": "String"
+                },
+                "X-Fc-Log-Type": {
+                    "required": false,
+                    "description": "\u8bf7\u6c42\u8fd4\u56de\u65e5\u5fd7\u7c7b\u578b, Tail \u4e3a\u8fd4\u56de\u51fd\u6570\u65e5\u5fd7\u6700\u540e 4KB \u6570\u636e\uff0cNone \u6216\u7a7a\u503c\u5219\u8fd4\u56de\u4e0d\u5e26\u6709\u65e5\u5fd7\uff0c\u9ed8\u8ba4\u4e3a None",
+                    "type": "String"
+                },
+                "X-Fc-Invocation-Type": {
+                    "required": false,
+                    "description": "\u8c03\u7528\u65b9\u5f0f:Sync\u6216\u8005Async\uff0c\u9ed8\u8ba4\u503c\uff1aSync",
+                    "type": "String"
+                },
+                "X-Fc-Date": {
+                    "required": false,
+                    "description": "\u53d1\u8d77API\u8c03\u7528\u7684\u65e5\u671f\uff0c\u7528\u4e8e\u5bf9\u8bf7\u6c42\u7b7e\u540d\u3002\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+                    "type": "String"
+                },
+                "X-Fc-Trace-Id": {
+                    "required": false,
+                    "description": "\u7528\u4e8e\u94fe\u8def\u8ffd\u8e2a\u7684ID\u3002",
+                    "type": "String"
+                }
+            },
+            "query": {
+                "qualifier": {
+                    "required": false,
+                    "description": "\u522b\u540d\u540d\u79f0",
+                    "type": "String"
+                },
+                "status": {
+                    "required": false,
+                    "description": "",
+                    "type": "String"
+                },
+                "nextToken": {
+                    "required": false,
+                    "description": "\u7528\u6765\u6807\u8bb0\u5f53\u524d\u5f00\u59cb\u8bfb\u53d6\u7684\u4f4d\u7f6e\uff0c\u7f6e\u7a7a\u8868\u793a\u4ece\u5934\u5f00\u59cb\u3002\u7b2c\u4e00\u6b21\u67e5\u8be2\u4e0d\u9700\u8981\u63d0\u4f9b\u8fd9\u4e2a\u53c2\u6570\uff0c\u540e\u7eed\u67e5\u8be2\u7684Token\u4ece\u524d\u4e00\u6b21\u67e5\u8be2\u7684\u8fd4\u56de\u7ed3\u679c\u4e2d\u83b7\u53d6\u3002",
+                    "type": "String"
+                },
+                "limit": {
+                    "required": false,
+                    "description": "\u9650\u5b9a\u6b64\u6b21\u8fd4\u56de\u8d44\u6e90\u7684\u6570\u91cf\u3002\u5982\u679c\u4e0d\u8bbe\u5b9a\uff0c\u9ed8\u8ba4\u8fd4\u56de20\uff0c\u6700\u5927\u4e0d\u80fd\u8d85\u8fc7100\u3002\u8fd4\u56de\u7ed3\u679c\u53ef\u4ee5\u5c0f\u4e8e\u6307\u5b9a\u7684\u6570\u91cf\uff0c\u4f46\u4e0d\u4f1a\u591a\u4e8e\u6307\u5b9a\u7684\u6570\u91cf\u3002",
+                    "type": "Integer"
+                },
+                "startedTimeBegin": {
+                    "required": false,
+                    "description": "",
+                    "type": "Long"
+                },
+                "startedTimeEnd": {
+                    "required": false,
+                    "description": "",
+                    "type": "Long"
+                },
+                "sortOrderByTime": {
+                    "required": false,
+                    "description": "",
+                    "type": "String"
+                },
+                "invocationIdPrefix": {
+                    "required": false,
+                    "description": "",
+                    "type": "String"
+                },
+                "includePayload": {
+                    "required": false,
+                    "description": "",
+                    "type": "Boolean"
+                }
+            }
+        }
+    },
+    "StopStatefulAsyncInvocation": {
+        "method": "PUT",
+        "path": "/services/{serviceName}/functions/{functionName}/stateful-async-invocations/{invocationId}",
+        "response": null,
+        "description": "\u8c03\u7528StopStatefulAsyncInvocation\u63a5\u53e3\u505c\u6b62\u5f02\u6b65\u4efb\u52a1",
+        "document": {
+            "en": "English documents are not provided yet",
+            "zh": "https://help.aliyun.com/document_detail/415771.htm"
+        },
+        "parameter": {
+            "path": {
+                "serviceName": {
+                    "required": true,
+                    "description": "\u670d\u52a1\u540d\u79f0",
+                    "type": "String"
+                },
+                "functionName": {
+                    "required": true,
+                    "description": "\u51fd\u6570\u540d\u79f0",
+                    "type": "String"
+                },
+                "invocationId": {
+                    "required": true,
+                    "description": "\u5f02\u6b65\u4efb\u52a1\u7684ID\u3002",
+                    "type": "String"
+                }
+            },
+            "header": {
+                "X-Fc-Account-Id": {
+                    "required": false,
+                    "description": "\u60a8\u7684\u963f\u91cc\u4e91\u8d26\u53f7\uff08\u4e3b\u8d26\u53f7\uff09ID\u3002",
+                    "type": "String"
+                },
+                "X-Fc-Date": {
+                    "required": false,
+                    "description": "\u53d1\u8d77API\u8c03\u7528\u7684\u65e5\u671f\uff0c\u7528\u4e8e\u5bf9\u8bf7\u6c42\u7b7e\u540d\u3002\u683c\u5f0f\u4e3ayyyy-mm-ddhh:mm:ss\u3002",
+                    "type": "String"
+                },
+                "X-Fc-Trace-Id": {
+                    "required": false,
+                    "description": "\u7528\u4e8e\u94fe\u8def\u8ffd\u8e2a\u7684ID\u3002",
+                    "type": "String"
+                }
+            },
+            "query": {
+                "qualifier": {
+                    "required": false,
+                    "description": "\u522b\u540d\u540d\u79f0",
+                    "type": "String"
+                }
+            }
+        }
     }
 }
