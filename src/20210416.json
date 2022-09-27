@@ -2518,17 +2518,17 @@
     "parameter": {
       "path": {
         "serviceName": {
-          "required": false,
+          "required": true,
           "description": "\u670d\u52a1\u540d\u79f0",
           "type": "String"
         },
         "functionName": {
-          "required": false,
+          "required": true,
           "description": "\u51fd\u6570\u540d\u79f0",
           "type": "String"
         },
         "invocationId": {
-          "required": false,
+          "required": true,
           "description": "\u5f02\u6b65\u4efb\u52a1\u7684ID\u3002",
           "type": "String"
         }
@@ -3216,7 +3216,7 @@
     "parameter": {
       "path": {
         "serviceName": {
-          "required": false,
+          "required": true,
           "description": "A short description of struct",
           "type": "String"
         }

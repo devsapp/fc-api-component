@@ -21,7 +21,7 @@
   "scripts": {
     "start": "npm run watch",
     "watch": "tsc -w",
-    "prebuild": "rimraf package-lock.json && rimraf dist && rimraf node_modules && npm i --production",
+    "prebuild": "npm i rimraf --no-save && rimraf package-lock.json && rimraf dist && rimraf node_modules && npm i --production",
     "build": "tsc"
   },
   "dependencies": {
