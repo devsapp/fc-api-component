@@ -38,14 +38,16 @@ export default class Component {
                 securityToken: SecurityToken,
                 region: region || 'cn-hangzhou',
                 timeout,
-                endpoint: (await fcCore.getEndpointFromFcDefault()) || `https://${AccountID}.${region}.fc.aliyuncs.com`
+                endpoint: (await fcCore.getEndpointFromFcDefault()) || `https://${AccountID}.${region}.fc.aliyuncs.com`,
+                headers: { 'user-agent': 'serverless-devs2.0' }
             })
         } else if (version == 20210406) {
             const config = new $OpenApi.Config({
                 accessKeyId: AccessKeyID,
                 accessKeySecret: AccessKeySecret,
                 securityToken: SecurityToken,
-                readTimeout: timeout
+                readTimeout: timeout,
+                userAgent: 'serverless-devs2.0',
             });
             config.endpoint = (await fcCore.getEndpointFromFcDefault()) || `${AccountID}.${region}.fc.aliyuncs.com`;
             return new FC_Open20210406(config);
