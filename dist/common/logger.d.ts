@@ -1,4 +1,4 @@
-declare type LogColor = "black" | "red" | "green" | "yellow" | "blue" | "magenta" | "cyan" | "white" | "whiteBright" | "gray";
+type LogColor = "black" | "red" | "green" | "yellow" | "blue" | "magenta" | "cyan" | "white" | "whiteBright" | "gray";
 export default class ComponentLogger {
     static CONTENT: string;
     static setContent(content: any): void;
