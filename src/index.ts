@@ -74,13 +74,13 @@ export default class Component {
         const version = this.comParse['data']['apiVersion'] || await this.fcDefault.get({ args: "api-default-version" }) || '20160815'
         if (version == '20160815' || version == 20160815) {
             apiContentAttr = fs.readFileSync(path.join(__dirname, "20160815.json"));
-        } else if (version == '20210416' || version == 20210416) {
+        } else if (version == '20210416' || version == 20210416 || version == '20210406' || version == 20210406) {
             apiContentAttr = fs.readFileSync(path.join(__dirname, "20210416.json"));
         } else {
             throw new Error(
                 JSON.stringify({
                     message: 'API version information error.',
-                    tips: 'API version value range: 20160815, 20210416',
+                    tips: 'API version value range: 20160815, 20210406',
                 }),
             );
         }
@@ -124,7 +124,7 @@ export default class Component {
                         type: String,
                     }, {
                         name: 'apiVersion',
-                        description: `[Optional] API version, value: 20210416, 20160815\n* Set default version: [s cli fc-default set api-default-version <version>]`,
+                        description: `[Optional] API version, value: 20210406, 20160815\n* Set default version: [s cli fc-default set api-default-version <version>]`,
                         type: String,
                     }]
                 }
@@ -193,7 +193,7 @@ export default class Component {
                         type: String,
                     }, {
                         name: 'apiVersion',
-                        description: '[Optional] API version, value: 20210416, 20160815\n* Set default version: [s cli fc-default set api-default-version <version>]',
+                        description: '[Optional] API version, value: 20210406, 20160815\n* Set default version: [s cli fc-default set api-default-version <version>]',
                         type: String,
                     }]
                 }, {
@@ -206,7 +206,7 @@ export default class Component {
                         summary: `s cli fc api ListServices`,
                     }]
                 },]
-                if (String(version) == "20210416") {
+                if (String(version) == "20210416" || String(version) == "20210406") {
                     helpmsg[3].optionList.push({
                         name: 'action',
                         description: `[Optional] The API name`,
